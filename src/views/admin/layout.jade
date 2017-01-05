@@ -1,0 +1,36 @@
+html(lang="ru", prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#  website: http://ogp.me/ns/website#")
+  head
+    meta(charset=config.encoding)
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    meta(http-equiv="X-UA-Compatible", content="IE=edge" )
+
+    meta(property="og:type", content="website")
+    meta(property="og:title", content="МЕГА Меняйся!")
+    meta(property="og:url", content="http://change.megamall.ru/")
+    meta(property="og:image", content="http://change.megamall.ru/static/images/share.png")
+    meta(property="og:description", content="Выиграй 100 000 р. на модные перемены!")
+    script(type='text/javascript').
+          var host = window.location.host
+          if ((host=='http://90.156.143.200/') || (host=='90.156.143.200') || (host=='www.90.156.143.200') || (host=='https://90.156.143.200')) {
+          document.location.href='90.156.143.200:4000'
+          }
+ 
+    title= head.title
+
+    - var cdn = 'http://maxcdn.bootstrapcdn.com'
+    link(rel='stylesheet'
+      href=cdn + '/font-awesome/4.5.0/css/font-awesome.min.css')
+
+    each src in config.scripts.admin
+      script(type="text/javascript", src=src, language="javascript")
+    each href in config.styles.admin
+      link(rel="stylesheet", href=href)
+    script(type="text/javascript", language="javascript")
+      | var tmp = "#{language_string}";
+      | window.language = JSON.parse(tmp.replace(/&quot;/g, '"'));
+      | var tmp2 = "#{city_string}";
+      | window.City = JSON.parse(tmp2.replace(/&quot;/g, '"'));
+    include /includes/favicons.jade
+  body.admin
+    block content

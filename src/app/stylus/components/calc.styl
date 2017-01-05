@@ -1,0 +1,641 @@
+.normal
+  .calc
+    
+    &_aff
+      margin-top 200px
+      font-size 12px
+    
+    &_line
+      position absolute
+      width 100%
+      height 0px
+      bottom 0px
+      border-radius 8px
+      background #9dd554
+
+      &:before
+        content ""
+        display block
+        width 16px
+        height 12px
+        border-radius: 12px/8px
+        top 0px
+        position absolute
+        left 0px
+        background-color rgba(255, 255, 255, 0.5)
+        
+      &.red
+        height 100%
+        background-color #da6e77
+        
+        &:before
+          display none  
+      
+    &_overflow
+      position absolute
+      top 0px
+      left 0px
+      border-radius 8px
+      width 100%
+      height 100%
+    
+    &_block
+      position absolute
+      height 379px
+      right -30px
+      top 120px
+      width 300px
+      
+      &_result
+        position absolute
+        bottom 0px
+        right 30px
+        color white
+        font-family DINPro-Bold
+        font-size 38px
+        
+        &.red
+          color #da6e77
+      
+      &_line
+        background-color  rgba(192, 230, 242, 0.54)
+        width 16px
+        position relative
+        margin-left auto
+        margin-right auto
+        border-radius 8px
+        height 379px
+        box-shadow: 0 5px 17px 0 rgba(0,0,0,0.2)
+        
+        &:before
+        &:after
+          position absolute
+          content "0 кг"
+          display block
+          left 30px
+          width 50px
+          bottom 10px
+          font-family DINPro-Medium
+          color  #ffffff
+          font-size: 20px
+          line-height 20px
+
+
+        &:after
+          content "15 кг"
+          top 10px
+        
+    &_div
+      padding-left 25px 
+      
+      .main_cost_multi
+        position relative
+        font-size: 18px
+        text-transform: none
+        color: #ffc064
+        background-repeat: no-repeat
+        background: url("images/expert/ff-bug.png")
+        displayblock
+        float left
+        left 10px
+        margin-top 19px
+
+    &_cost
+     line-height 48px
+     font-size 36px
+     margin-top 10px 
+     display inline-block
+     float left
+     width auto
+     padding-right 23px
+     background-image url(images/calc/ruble_small.png) 
+     background-repeat no-repeat
+     background-position right center
+     color white
+
+    &_win
+      font-size 16px
+      color white
+      font-family DINPro-Light
+      line-height 16px
+      float left
+      
+    &_look
+      display block
+      width 195px
+      position relative
+      height 120px
+      background-image url("images/calc/get_look.png")
+      background-position right bottom
+      background-repeat no-repeat
+      
+      & span
+        color white
+        font-size 18px
+        margin-top 20px
+        position relative
+        display block
+        text-transform uppercase
+        padding-top 20px
+        font-family DINPro-Bold
+        &:before
+          position: absolute
+          content: ""
+          background-color: #ffc064
+          width: 44px
+          
+          height: 1px
+          top: 0px
+
+    &_forget
+      font-size 20px
+      font-family DINPro-Medium
+      line-height 22px
+      display block
+      position relative
+
+    &_calc
+      position relative
+      display block
+      width 351px
+      
+      &_body
+        float left
+      
+      &_round
+        position relative
+        display inline-block
+        width 76px
+        z-index 35
+        height 76px
+        border-radius 50%
+        border-width 2px
+        border-color rgba(255,255,255,0.66)
+        border-style dotted
+        margin-bottom 21px
+        transition 300ms all ease-in
+        background-position center
+        background-repeat no-repeat
+        background-color transparent
+        cursor pointer
+        
+        &_1
+          background-image url("images/calc/1.png")
+      
+        &_2
+          background-image url("images/calc/2.png")
+        &_3
+          background-image url("images/calc/3.png")
+        &_4
+          background-image url("images/calc/4.png")
+        &_5
+          background-image url("images/calc/5.png")
+        &_6
+          background-image url("images/calc/6.png")
+        &_7
+          background-image url("images/calc/7.png")
+        &_8
+          background-image url("images/calc/8.png")
+        &_9
+          background-image url("images/calc/9.png")
+        &_0
+          background-image url("images/calc/0.png")
+          z-index 45
+        
+        & .counter_round
+          opacity 0
+          
+          &.active
+            opacity 1
+
+
+          &:hover
+            .count
+              background color_mega_red
+              
+            .remove
+              opacity 1
+
+          & .count
+            border-radius 50%
+            width 30px
+            top 0px
+            right -8px
+            user-select(none)
+            height 30px
+            font-size 16px
+            line-height 30px
+            font-family DINPro-Bold
+            display block
+            position absolute
+            z-index 5
+            background color_counter
+          
+          & .remove
+            opacity 0
+            width 15px
+            height 8px
+            top 10px
+            position absolute
+            right -20px
+            display block
+            background-image url("images/calc/remove.png")
+            background-position center right
+            background-repeat no-repeat
+            
+        &:hover
+          background-color white
+          border-style solid
+          border-color white
+          
+        &.remove_all
+          background color_mega_red
+          border-color color_mega_red
+          border-style solid
+          background-image url("images/calc/remove_big.png")
+          background-position center
+          background-repeat no-repeat
+
+          &:hover
+            opacity 0.7
+            
+        
+        &.share
+          background  #1f7b95
+          border-color  #1f7b95
+          border-style solid
+          background-image url("images/calc/share.png")
+          background-position center
+          background-repeat no-repeat
+
+          
+
+          & .expert_item_share
+            opacity 0
+            bottom -24px
+            left -38px
+            width 35px
+            z-index 34
+            
+            & .soc:not(.share)
+              opacity 1
+              
+          &:hover
+            
+            .expert_item_share
+              opacity 1
+          
+      &_before
+        position absolute
+        top 0px
+        right -15px
+        height 120px
+        width 35px
+        background url("images/calc/befiore.png")
+        background-repeat no-repeat
+        background-position  center
+      
+      &_aftertext
+        font-size 14px
+        line-height 46.936px
+        width 351px
+        display block
+        text-align center
+      
+      &_weight
+        font-family pfdintextcondpro-regular
+        font-size 80px
+        color  #8bd4e8
+        line-height 125px
+        letter-spacing -1px
+        text-transform uppercase
+        
+        &:after
+          content "кг*"
+          font-size 20px
+          position relative
+          text-transform uppercase
+          display inline
+          top -41px
+          left 2px
+           
+      &_cost
+        line-height 125px
+        color #3b9cb8
+        margin-left -8px
+        font-family pfdintextcondpro-regular
+        font-size 80px
+        padding-right 15px
+        background url("images/calc/ruble_small_head.png")
+        background-repeat no-repeat
+        background-position right 20px
+
+      &_comments
+        position absolute
+        top 170px
+        right 247px
+        z-index 0
+        width 411px
+        background-position center
+        background-repeat no-repeat
+        height 264px
+        background-image url("images/calc/scale.png")
+    
+      &_body  
+        width 351px
+        position relative
+        border-radius 12px
+        background #3b9cb8
+        height 534px
+        overflow hidden
+        
+      &_top
+        background white
+        width 100%
+        height 122px
+        
+    &_sub
+      font-size 30px
+      font-family PlayfairDisplay-Bold
+      line-height 32px
+      margin-top 85px
+      text-transform none
+      position relative
+      color white
+
+      &:before
+        position absolute
+        content ""
+        background-color  #da6e77
+        width 70px
+        height 1px 
+        top -20px
+
+    &_title
+      font-family PlayfairDisplay-Bold
+      font-size 48px
+      text-transform none
+      line-height 48px
+      
+    &_moreicons
+       width 100%
+       height 43px
+       display inline-block
+       margin-top 0px
+       position relative
+       background-image url(images/calc/more_icons.png)
+       background-size contain
+       background-position left
+       background-repeat no-repeat
+     
+    &_near
+      text-decoration underline!important     
+      margin-top 10px  
+      display block
+      position relative
+      
+      &_2
+        margin-top 20px
+        
+      
+    &_text
+      font-size 16px
+      font-family DINPro-Light
+      line-height 22px
+      
+      &_2
+        font-size 18px
+        line-height 26px
+        display block
+        min-height 190px
+      
+      &_bold
+        font-family DINPro-Medium
+          
+      &_left
+        margin-top 10px
+        position relative
+        display block
+
+
+
+@media (max-width:  991px)    
+  .normal
+    .calc
+      
+      &_win
+        font-size 17px
+
+
+      &_div
+        margin-left -55px
+        margin-right -30px
+        width 100%
+        position relative
+        top -60px
+        font-size 16px
+        line-height 20px
+      
+
+      &_money
+        width 320px
+        background url(images/expert/mega_cart.png) 101px bottom no-repeat
+        padding-bottom 130px
+        position relative
+        top -20px
+        position relative
+
+      &_photo
+        margin-left -30px
+        margin-right -30px
+      
+      &_near
+        margin-top 20px
+        
+        &_2
+          margin-left -30px
+          margin-right -30px
+          margin-top 20px
+          
+          & br
+            line-height 0px
+            display none
+        
+      &_forget
+        font-size 22px
+        font-family DINPro-Medium  
+
+
+      &_look
+        top -40px
+        background-image: url(images/calc/mobile/get_look.png)
+        background-position: right top
+        width 266px
+        height 165px
+        
+
+        &_2
+          margin-left -30px
+          margin-right -30px
+          line-height 20px
+  
+
+          & br
+            line-height 0px
+            display none
+            
+        span 
+          top 44px
+      
+      &_sub
+        margin-top 35px
+        font-size 28px
+        margin-left -30px
+        margin-right -30px
+        line-height 30px
+        
+        &:before
+          display none
+          
+          
+      &_text
+        &_2
+          font-size 16px
+          margin-left -30px
+          margin-right -30px
+          min-height 0px
+          
+          & br
+            line-height 0px
+
+      &_block
+        width 18px!important
+        height 404px
+        top 165px
+        right 30px!important
+        
+        &_line
+          height 404px
+          &:before
+          &:after
+            display none
+      
+        &_result
+          display none
+
+      &_text_left    
+        font-size: 16px
+        line-height 22px
+        
+      &_near
+        margin-top 70px
+        font-size 16px
+        line-height 20px
+        
+      &_calc
+        margin-top 165px
+        width 100%
+        float left
+        
+        &_body
+          width 265px
+          height 404px
+          float none
+          left -15px
+          margin-left auto
+          margin-right auto
+          
+          & .calc_calc_body
+            margin-top -15px
+            float left
+            left 0px
+            
+        &_comments
+          top -144px
+          width 168px
+          height 132px
+          width: 168px
+          height: 132px
+          left 129px
+          background-image url("images/calc/mobile/comments.png")
+        
+        &_aftertext
+          overflow hidden
+          width 100%
+          left -15px
+          
+        &_top
+          height 93px
+          
+        &_round
+          height 58px
+          width 58px
+          
+          & .counter_round .count
+            width 22px
+            height 22px
+            font-size: 14px
+            line-height: 22px
+          
+          & .counter_round .remove
+            top 5px
+          
+          &.remove_all 
+            background url(images/calc/mobile/remove.png) center no-repeat
+            background-color #c8444f
+            
+          &.share
+            background: url(images/calc/mobile/share.png) center no-repeat
+            background-color #1f7b95
+            
+          
+          &_1
+            background-image url("images/calc/mobile/1.png")
+      
+          &_2
+            background-image url("images/calc/mobile/2.png")
+          &_3
+            background-image url("images/calc/mobile/3.png")
+          &_4
+            background-image url("images/calc/mobile/4.png")
+          &_5
+            background-image url("images/calc/mobile/5.png")
+          &_6
+            background-image url("images/calc/mobile/6.png")
+          &_7
+            background-image url("images/calc/mobile/7.png")
+          &_8
+            background-image url("images/calc/mobile/8.png")
+          &_9
+            background-image url("images/calc/mobile/9.png")
+          &_0
+            background-image url("images/calc/mobile/0.png")
+            z-index 45
+        
+        &_weight
+        &_cost
+          line-height 100px
+          
+        &_weight
+          font-size 66px
+          
+          &:after
+            font-size 19px
+            top -30px
+        
+        &_cost
+          font-size 66px
+          background url(images/calc/ruble_small_head.png) right 16px no-repeat
+          
+        &_before
+          height 94px
+          background: url(images/calc/mobile/before.png) center no-repeat
+          
+        
+  body.normal.body_about .main.timer
+    background none 
+    
+
+@media (max-width:  380px)  
+  .normal .calc_block
+    right 10px!important

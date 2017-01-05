@@ -1,0 +1,47 @@
+header.navbar.navbar-default.navbar-fixed-top.hidden-sm.hidden-xs.zindex_45
+  .col-lg-3.col-md-2
+    .navbar-header
+
+      a.navbar-brand(href="/" title="МегаМеняйся 2.0")
+    
+  .col-md-5
+    a.header_nav(href="/about", title="О проекте") О проекте
+    a.header_nav(href="/calculate", title="Калькулятор") Калькулятор
+    a.header_nav(href="/photo", title="Мнение экспертов") Мнение экспертов
+  include counter.jade
+
+
+
+header.navbar.navbar-default.navbar-fixed-top.hidden-md.hidden-lg.zindex_45
+  .row
+    .header_menu.hidden-xs-hidden-sm
+      .header_control.overflow_hidden(style="padding: 15px;")
+        a(href="/" title="МегаМеняйся 2.0")
+          img.pull-left.open_mega.pull-left(src="static/images/logo_mega_small_menu.png")
+        span.pull-right.text-right.mega_close +
+      .header_line
+        a.header_nav(href="/about", title="О проекте") О проекте
+      .header_line
+        a.header_nav(href="/calculate", title="Калькулятор") Калькулятор
+      .header_line
+        a.header_nav(href="/photo", title="Мнение экспертов") Мнение экспертов
+      .header_line.balance_mobile_place
+      script(type="text/javascript", src="/static/views/photo/balance_popup.js", language="javascript")
+      script(type="text/javascript", src="/static/views/photo/balance_mobile.js", language="javascript")
+     
+
+  .col-sm-12
+    .row
+      .counter.pull-left
+        span.counter_desc собрано
+        ul.text-center
+          include counter_data.jade
+        span.counter_desc Одежды
+      .pull-right
+        img.open_menu(src="static/images/hamburger.png")
+
+      .navbar-header.pull-right
+        a.navbar-brand.pull-right(href="/" title="МегаМеняйся 2.0")
+    
+    
+

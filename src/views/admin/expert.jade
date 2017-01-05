@@ -1,0 +1,155 @@
+extends ./layout.jade
+block content
+
+  header.header  
+    .container.admin_page
+      h1.header_logo.pull-left.col-sm-3.col-xs-6
+        a.logo(href='/admin', title=language.header.main)
+      .text-center.col-sm-6.hidden-xs.hidden-sm
+        span.header_desc Панель эксперта
+      .pull-right.col-sm-3.col-xs-6.text-right(id="logout_place")
+        
+      script(type="text/javascript", src="/static/views/admin/logout.js", language="javascript")
+
+  .main.admin_page
+    .background
+
+
+    .container.main_first-container(id="photos_place")
+    script(type="text/javascript", src="/static/views/admin/expert.js", language="javascript")
+      //- table.table-condensed.table.table-striped.text-center.margin_top_20
+      //-   thead
+      //-     tr
+      //-       th.text-center ID
+      //-       th.text-center Фотография
+      //-       th.text-center Дата
+      //-       th.text-center Фамилия
+      //-       th.text-center Имя
+      //-       th.text-center Статус
+      //-       th.text-center Действие
+      //-   tbody
+      //-     tr
+      //-       td 12
+      //-       td
+      //-         a.fancybox(href="static/images/test.jpg", title="Сюда id в формате 'id номер'")
+      //-           img.img-responsive.table-img.img-thumbnail(title="Сюда id в формате 'id номер'" src="static/images/test.jpg")
+      //-       td 16.03.16 21:30
+      //-       td Шмаков
+      //-       td Дмитрий
+      //-       td.text-center Новое 
+      //-       // + Ожидает одобрения, Одобренно
+      //-       td
+      //-         a.btn.btn-primary(title="Номер '+ id'", href="/") Обработать 
+      //-     tr
+      //-       td 12
+      //-       td
+      //-         a.fancybox(href="static/images/test.jpg", title="Сюда id в формате 'id номер'")
+      //-           img.img-responsive.table-img.img-thumbnail(title="Сюда id в формате 'id номер'" src="static/images/test.jpg")
+      //-       td 16.03.16 21:30
+      //-       td Шмаков
+      //-       td Дмитрий
+      //-       td.text-center Новое 
+      //-       // + Ожидает одобрения, Одобренно
+      //-       td
+      //-         a.btn.btn-primary(title="Номер '+ id'", href="/") Обработать 
+      //-     tr
+      //-       td 12
+      //-       td
+      //-         a.fancybox(href="static/images/test.jpg", title="Сюда id в формате 'id номер'")
+      //-           img.img-responsive.table-img.img-thumbnail(title="Сюда id в формате 'id номер'" src="static/images/test.jpg")
+      //-       td 16.03.16 21:30
+      //-       td Шмаков
+      //-       td Дмитрий
+      //-       td.text-center Новое 
+      //-       // + Ожидает одобрения, Одобренно
+      //-       td
+      //-         a.btn.btn-primary(title="Номер '+ id'", href="/") Обработать 
+
+
+      //- .container.text-center
+      //-     ul.pagination
+      //-       li.disabled
+      //-         a(href="#" title="Назад") «
+      //-       li.active
+      //-         a(href="#" title="Страница 1") 1
+      //-       li
+      //-         a(href="#" title="Страница 2") 2
+      //-       li
+      //-         a(href="#" title="Страница 3") 3
+      //-       li
+      //-         a(href="#" title="Страница 4") 4
+      //-       li
+      //-         a(href="#" title="Страница 5") 5
+      //-       li
+      //-         a(href="#" title="Вперед") »       
+
+    //- br
+    //- br
+    //- br
+    //- br
+
+
+
+
+    //- .container.main_first-container
+
+    //-   h1.text-left ID '+номер'
+    //-    a.btn.btn-primary.pull-right(title="Вернуться назад", href="/") Назад
+
+
+    //-   .margin_top_20
+    //-     .col-sm-5
+    //-       a.fancybox(href="static/images/test.jpg", title="Сюда id в формате 'id номер'")
+    //-         img.img-responsive.img-rounded(title="Сюда id в формате 'id номер'" src="static/images/test.jpg")
+    //-     .col-sm-7
+    //-       form.form_horizontal.child
+            
+              
+    //-         h2.text-center.padding-5.border-no Оставьте отзыв
+
+
+    //-         .form-group.overflow_hidden
+    //-           .col-xs-12.text-left
+    //-             label.control-label Ваш комментарий
+    //-           .col-xs-12
+    //-             textarea.textarea_comments.form-control(placeholder="Введите ваш комментарий")
+
+    //-         .form-group.overflow_hidden
+    //-           .col-xs-12.text-center
+    //-             label.control-label Ваша оценка
+    //-           .col-xs-6.text-center
+    //-             .radio-thumb.radio-thumb-up.pull-right
+    //-               label.text-right
+    //-                 input(type="radio", value="ok",name="choise")
+    //-                 i.fa.fa-thumbs-up
+    //-           .col-xs-6.text-center
+    //-             .radio-thumb.radio-thumb-down.pull-left
+    //-               label
+    //-                 input(type="radio", value="no",name="choise")
+    //-                 i.fa.fa-thumbs-down
+
+    //-         .form-group.overflow_hidden
+    //-           .col-xs-12.text-center
+    //-             label.col-sm-6.control-label.text-right Рекомендовать как победителя
+    //-             .col-sm-6.checkbox.text-left
+    //-               label.text-left
+    //-                 input(type="checkbox")
+    //-                 | Рекомендовать
+
+    //-         .form-group.margin_top_40.text-center
+    //-           button.btn.btn-primary Отправить на модерацию
+
+    //- br
+    //- br
+    //- br
+    //- br
+
+    
+
+
+
+
+
+
+  include ./includes/footer.jade        
+  //- include ./includes/callback.jade

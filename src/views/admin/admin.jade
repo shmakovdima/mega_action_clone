@@ -1,0 +1,134 @@
+extends ./layout.jade
+block content
+
+  script(type="text/javascript", language="javascript")
+    | window.date_start = "#{startdate.date_start}"
+    | window.is_begin = #{startdate.is_begin}
+
+  header.header  
+    .container.admin_page
+      h1.header_logo.pull-left.col-sm-3.col-xs-6
+        a.logo(href='/admin', title=language.header.main)
+      .text-center.col-sm-6.hidden-xs.hidden-sm
+        span.header_desc Панель суперадминистратора
+      .pull-right.col-sm-3.col-xs-6.text-right(id="logout_place")
+      script(type="text/javascript", src="/static/views/admin/logout.js", language="javascript")
+
+  .main.admin_page
+    .background
+    .container.main_first-container
+      h1.text-center Панель суперадминистратора
+
+      .item.col-md-12.margin_top_10.text-center.dashboard
+        .row
+          .col-sm-6.margin_top_20.overflow_hidden
+            .col-xs-6
+              h3 Кол-во участников
+              span
+                i.fa.fa-male
+              h3(id="members_count")
+
+            .col-xs-6
+              h3 Сданный вес
+              span
+                i.fa.fa-shopping-bag
+              h3(id="total_weight")
+          .col-sm-6.margin_top_20.overflow_hidden
+            .col-xs-6
+              h3 Загруженные фото
+              span
+                i.fa.fa-photo
+              h3(id="photos_count")
+            .col-xs-6
+              h3 Выданные деньги
+              span
+                i.fa.fa-ruble
+              h3(id="money_paid")
+
+
+
+      .item.col-md-6.form-horizontal.admin_weight(style="min-height: 800px")
+        h2.text-center Вес собранных вещей
+
+        table.table.table-striped.custab.text-center(id="weight_table")
+          thead
+            tr
+              th.text-center День 
+              th.text-center Вес (кг)
+              th.text-center Вес в графике (кг)
+
+
+      //-.item.col-md-6
+        h2.text-center Старт акции
+
+        div.form-horizontal(id="startdate_place")
+        script(type="text/javascript", src="/static/views/admin/startdate.js", language="javascript")
+
+
+      .form-horizontal.item.col-md-6
+        h2.text-center Ccылки на базы
+
+      .form-horizontal.item.col-md-6
+        a(href="/admin/search",title="Поиск человека")
+          i.fa.fa-database
+          | Поиск участника
+
+        
+      .form-horizontal.item.col-md-6
+        a(href="/admin/users",title="Зарегистрированные пользователи")
+          i.fa.fa-database
+          | Зарегистрированные пользователи
+
+      .form-horizontal.item.col-md-6
+        a(href="/admin/uploaded",title="Загруженные фотографии")
+          i.fa.fa-database 
+          | Загруженные фотографии
+
+      .form-horizontal.item.col-md-6
+        a(href="/admin/weight",title="Замер веса")
+          i.fa.fa-database 
+          | Замер веса
+
+      .form-horizontal.item.col-md-6
+        a(href="/admin/card",title="Выдача карт")
+          i.fa.fa-database 
+          | Выдача карт
+
+      .form-horizontal.item.col-md-6
+        a(href="/admin/winner",title="Победители")
+          i.fa.fa-database 
+          | Победители
+
+      .form-horizontal.item.col-md-6
+        h2.text-center Экспорт 
+        
+
+      .form-horizontal.item.col-md-6.text-center
+        div
+          a.btn.btn-primary.export-link(href="/api/preregister/csv") 
+            i.fa.fa-exchange
+            | Экспортировать участников
+        .margin_top_20
+          a.btn.btn-primary.export-link(href="/api/photo/csv2")
+            i.fa.fa-exchange
+            | Экспортировать фото
+        .margin_top_20
+          a.btn.btn-primary.export-link(href="/api/preregister/weight/csv")
+            i.fa.fa-exchange
+            | Экспортировать отчет сданного веса
+        .margin_top_20
+          a.btn.btn-primary.export-link(href="/api/preregister/supervisor/csv")
+            i.fa.fa-exchange
+            | Экспортировать отчёт супервизера
+        .margin_top_20
+          a.btn.btn-primary.export-link(href="/api/photo/csv")
+            i.fa.fa-exchange
+            | Экспортировать отчет фотоконкурса
+        .margin_top_20
+          a.btn.btn-primary.export-link(href="/api/preregister/transaction/csv")
+            i.fa.fa-exchange
+            | Экспортировать отчет призов
+
+    
+  include ./includes/footer.jade
+  include ./includes/callback.jade  

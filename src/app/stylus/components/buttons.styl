@@ -1,0 +1,73 @@
+@import '../variables.styl'
+
+.btn
+  color white
+  text-transform uppercase
+  vertical-align middle
+  font-size 12px
+  height 36px
+  line-height 34px
+  padding 0 20px
+  border-radius 20px
+  transition 300ms all ease-in
+  outline none!important
+
+  &:hover, &:active, &:focus 
+    color white
+
+  &.btn-default
+    border 1px solid color_gray_hover
+    background color_gray
+    
+    &:hover, &:active, &:active:hover, &:focus
+      background color_gray_hover
+    
+  &-primary
+  &-secondary
+    background color_red
+    border-color color_red
+      
+    &:hover, &:active, &:active:hover, &:focus, &:active:focus
+      background color_red_hover
+      border-color color_red_hover
+
+  &.btn-info
+  &.btn-danger
+    background color_purpure
+    border-color color_purpure
+    border-radius 12px
+    font-size 16px
+    line-height 42px
+    height 44px
+    transition none
+    transition 200ms opacity ease-in
+    min-width 210px
+    font-family DINPro-Medium
+    transform scaleX(1.0074)
+    
+    &:active
+    &:focus
+    &:active:hover
+    &:hover
+      background color_purpure
+      border-color color_purpure
+      opacity 0.8
+  
+  &.btn-danger
+    background color_orange
+    border-color color_orange
+    
+    &:active
+    &:focus
+    &:active:hover
+    &:hover
+      background color_orange
+      border-color color_orange
+  
+  &.btn-more
+    background transparent
+    border 2px solid black
+    color black
+    font-size 16px
+    text-transform none
+      

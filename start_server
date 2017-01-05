@@ -1,0 +1,3 @@
+forever start -a -l ~/forever.log -e ~/forever.errors.log -o ~/forever.output.log -c "coffee --nodejs --stack_size=12288 --nodejs --max-old-space-size=12288" server.export.coffee
+
+forever start -a -l ~/forever.log -e ~/forever.errors.log -o ~/forever.output.log -c "coffee --nodejs --stack_size=12288 --nodejs --max-old-space-size=12288" server.coffee

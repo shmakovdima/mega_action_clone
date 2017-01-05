@@ -1,0 +1,104 @@
+.graph
+  
+  &_block
+    position  relative
+    width 90%
+    width calc(100% - 15px)
+    margin-top 70px
+
+  &_date
+    min-height 255px
+    position relative
+    width 100%
+    
+    & canvas
+      position absolute
+      left 0px
+      height 100%!important
+      bottom 0px 
+      
+  &_x_axis
+    left 0px
+    bottom 1px
+    height 2px
+    position absolute
+    width 91%
+    z-index 5
+    width calc(90% + 7px)
+    background rgba(255, 255, 255, 0.5)
+    
+  &_y_axis
+    position absolute
+    bottom -8px
+    left 90%
+    z-index 5
+    width 2px
+    height 101%
+    height calc(100% + 6px)
+    background rgba(255, 255, 255, 0.5)
+    
+    &_1
+      left 22.5%
+    &_3
+      left 67%
+     
+    &_2
+      left 45%
+      background white
+      
+  &_right_title
+    color: #ffffff
+    font-size 14px
+    color white
+    line-height 20px
+    position absolute
+    bottom -8px
+    left 92%
+    width 100px
+    left calc(90% + 25px)
+
+    &.center
+      top 48%
+    
+    &.top
+      top -15px 
+
+     
+  &_bottom_title
+    left -36px
+    bottom -39px
+    color #ffffff
+    position absolute
+    font-size 16px
+    line-height 20px
+    width 106px
+    
+    &_1
+      left 15%
+      opacity 0.7
+      
+      &.graph_bottom_title_about
+        left 17%
+    &_2
+      left 38%
+      
+      &.graph_bottom_title_about
+        left 40%
+        
+    &_3
+      left: 60%
+      opacity 0.7
+      
+      &.graph_bottom_title_about
+        left 62%
+        
+    
+    &_top
+      top -32px
+      bottom none
+      font-size 22px
+
+    &.right
+      right 27px
+      left calc(90% - 40px)
+      

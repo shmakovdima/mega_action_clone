@@ -1,0 +1,108 @@
+extends ./layout.jade
+block content
+
+  header.header  
+    .container
+      h1.header_logo.pull-left.col-sm-3.col-xs-6
+        a.logo(href='/admin', title=language.header.main)
+      .text-center.col-sm-6.hidden-xs.hidden-sm
+        span.header_desc Зарегистрированные пользователи         
+      .pull-right.col-sm-3.col-xs-6.text-right
+        button.header_logout.btn.btn-primary(title='Выход') Выход
+
+  .main.admin_page
+    .background
+      .container.main_first-container
+        h1.text-center Зарегистрированные пользователи
+
+        table.table.table-striped.custab.text-center.users_layout
+            thead
+              tr
+                th.text-center Имя 
+                th.text-center Фамилия
+                th.text-center Телефон
+                th.text-center Email
+                th.text-center Какая мега
+                th.text-center Действие
+            tr
+              td 
+                input.text-center(type=text, placeholder="Введите значение", value="Дима")
+              td 
+                input.text-center(type=text, placeholder="Введите значение", value="Шмаков")
+              td 
+                input.text-center.phone(type=text, placeholder="Введите значение", value="+79035742365")
+              td 
+                input.text-center.mail(type=text, placeholder="Введите значение", value="contact@shmakovdima.ru")
+              td.text-center 
+                select.selectpicker.text-center(data-width="100%")
+                  option(selected="selected", value="0") Теплый Стан
+                  option(value="1") Белая Дача
+                  option(value="2") Химки
+                  option(value="3") Дыбенко
+                  option(value="4") Парнас
+                  option(value="5") Адыгея-Кубань
+                  option(value="6") Екатеринбург
+                  option(value="7") Казань
+                  option(value="8") Нижний Новгород
+                  option(value="9") Новосибирск
+                  option(value="10") Омск
+                  option(value="11") Ростов-на-Дону
+                  option(value="12") Самара
+                  option(value="13") Уфа
+              td 
+                span.remove +
+            tr
+              td 
+                input.text-center(type=text, placeholder="Введите значение", value="Дима")
+              td 
+                input.text-center(type=text, placeholder="Введите значение", value="Шмаков")
+              td 
+                input.text-center.phone(type=text, placeholder="Введите значение", value="+79035742365")
+              td 
+                input.text-center.mail(type=text, placeholder="Введите значение", value="contact@shmakovdima.ru")
+              td.text-center
+                select.selectpicker.text-center(data-width="100%")
+                  option(selected="selected", value="0") Теплый Стан
+                  option(value="1") Белая Дача
+                  option(value="2") Химки
+                  option(value="3") Дыбенко
+                  option(value="4") Парнас
+                  option(value="5") Адыгея-Кубань
+                  option(value="6") Екатеринбург
+                  option(value="7") Казань
+                  option(value="8") Нижний Новгород
+                  option(value="9") Новосибирск
+                  option(value="10") Омск
+                  option(value="11") Ростов-на-Дону
+                  option(value="12") Самара
+                  option(value="13") Уфа
+              td   
+                span.remove +
+        
+        .container.text-center
+          ul.pagination
+            li.disabled
+              a(href="#" title="Назад") «
+            li.active
+              a(href="#" title="Страница 1") 1
+            li
+              a(href="#" title="Страница 2") 2
+            li
+              a(href="#" title="Страница 3") 3
+            li
+              a(href="#" title="Страница 4") 4
+            li
+              a(href="#" title="Страница 5") 5
+            li
+              a(href="#" title="Вперед") »
+
+
+
+
+
+
+
+
+
+
+          

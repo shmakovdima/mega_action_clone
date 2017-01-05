@@ -1,0 +1,50 @@
+extends ./layout.jade
+block content
+  body.normal.graph
+    .main.timer.wow.fadeIn
+
+      include ./components/header_old.jade
+
+      .col-md-6.hidden-xs.hidden-sm
+        .child
+          .pull-right.counter_date
+            span.counter_date_label Осталось
+            ul.text-center.pull-right
+              li
+                div.counter_date_number
+                  span= dates_count % 10
+                  
+            span.counter_date_label дня
+        .helper
+            
+      .col-md-6.text-center-sm
+        .child
+          h1 Меняй старую <br> одежду на новую
+          span.main_dates 9 марта — 9 апреля
+
+          span.main_cost 100 000 
+            
+            
+          span.main_win выиграй «Модный гардероб на год»
+            
+          .main_icons
+         
+
+          .counter_date.hidden-lg.hidden-md
+            span.counter_date_label Осталось
+            ul.text-center
+
+              li
+                div.counter_date_number
+                  span= dates_count % 10
+                  
+            span.counter_date_label дня
+
+          div(id="popup_place")
+          script(type="text/javascript", src="/static/views/register_popup.js", language="javascript")
+          script(type="text/javascript", src="/static/views/register.js", language="javascript")
+            
+          span.main_aftertext чтобы узнать первым <br> о начале конкурса
+        .helper.helper-not-sm
+
+      include ./components/footer_old.jade

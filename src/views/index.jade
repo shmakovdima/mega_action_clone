@@ -1,0 +1,96 @@
+html
+  head
+
+    meta(charset=config.encoding)
+    script(type='text/javascript').
+          var host = window.location.host
+          if ((host=='http://90.156.143.200/') || (host=='90.156.143.200') || (host=='www.90.156.143.200') || (host=='https://90.156.143.200')) {
+          document.location.href='90.156.143.200:4000'
+          }    
+    meta(http-equiv="X-UA-Compatible", content="IE=edge;chrome=1" )
+    meta(name="mailru-verification",content="71cbee74933b8e90" )
+    meta(property="og:type", content="website")
+    meta(property="og:title", content="МЕГА Меняйся!")
+    meta(property="og:url", content="http://change.megamall.ru/")
+    meta(property="og:image", content="http://change.megamall.ru/static/images/share2.png")
+    meta(property="og:description", content="С 9 марта по 9 апреля приноси ненужную одежду в МЕГУ, участвуй в онлайн-конкурсе и получай призы!")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    script(async="", src = "//www.google-analytics.com/analytics.js").
+
+    title= head.title
+    meta(property="title", content="#{head.meta.title}")
+    meta(property="description", content="#{head.meta.description}")
+    meta(property="keywords", content="#{head.meta.keywords}")
+
+    //-each src in config.scripts.common
+      script(type="text/javascript", src=src, language="javascript")
+    script(type="text/javascript", src="/static/script.js", language="javascript")
+    each href in config.styles.common
+      link(rel="stylesheet", href=href)
+    script(type="text/javascript", language="javascript")
+        | var tmp = "#{language_string}";
+        | window.language = JSON.parse(tmp.replace(/&quot;/g, '"'));
+        | var tmp2 = "#{city_string}";
+        | window.City = JSON.parse(tmp2.replace(/&quot;/g, '"'));
+    include includes/favicons.jade
+    //-link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+", crossorigin="anonymous")
+    block content
+  body.normal.graph.show_final
+
+    .main.main_page.wow.fadeIn(id="#top")
+      .girl.girl_index.pull-left.hidden-xs.hidden-sm.fadeInLeft.wow(data-wow-iteration="1", data-wow-offset="0")
+      .girl.girl_photo.pull-left.fadeIn.hidden-xs.hidden-sm.wow(data-wow-iteration="1", data-wow-offset="0")
+
+      include components/header_new.jade
+      
+      .col-md-4.col-md-offset-4.text-center-sm.zindex_10
+        .child
+          h1 Меняй старую<br>одежду на<br>новую
+          span.main_dates 9 марта — 9 апреля
+
+          span.main_cost 100 000 
+            i.fa.fa-rub
+            
+          span.main_win выиграй «Модный гардероб на год»
+          .main_icons
+
+          div.hidden-lg.hidden-md(style="width: 100%; position: relative; float: left; display: block;")
+            a.btn.btn-info.main_reg.main_reg_left(title='На главную', href="/calculate", onclick="ga('send', 'event', 'click', 'main_click_count');") Посчитать
+          a.hidden-xs.hidden-sm.btn.btn-info.main_reg.main_reg_left(title='На главную', href="/calculate", onclick="ga('send', 'event', 'click', 'main_click_count');") Посчитать
+
+            
+          span.main_aftertext
+            a.pull-right.hidden-md.hidden-lg.main_down(href="#photo")
+                | выиграй
+                br
+                | 3000 
+                span.main_small_ruble  
+            | сколько ты получишь<br> на модный шопинг
+            
+        .helper.helper-not-sm
+
+      .col-md-4.text-center-sm.redblock
+        .photo_small.hidden-md.hidden-lg
+        .child
+          h1(id="photo") Как отличить<br>старое от<br> модного?
+          span.main_dates.red_page Получи совет экспертов<br>моды и выиграй карту<br>«МЕГА подарок»
+
+          span.main_cost 3000 
+            i.fa.fa-rub
+            span.main_cost_multi.text-center х15
+            
+          span.main_win eженедельно
+                   
+          a.btn.btn-danger.main_reg.main_reg_right.red_page(title='Загрузи свой лук', href="/photo", onclick="ga('send', 'event', 'click', 'main_click_look');") загрузи свой лук
+
+            
+          span.main_aftertext получи взвешенное<br>мнение экспертов моды
+
+          div(style="width: 100%; position: relative; float: left; display: block;")
+            a.footer_container_big.margin_top_40.hidden-lg.hidden-md(href="/about#future", title="Что случится с вещами", onclick="ga('send', 'event', 'reg', 'open_about_future');")
+        .helper.helper-not-sm
+
+      .expert_up
+      include ./components/footer_new.jade
+    include ./components/graph_popup.jade
+    include ./components/popup_nocart.jade

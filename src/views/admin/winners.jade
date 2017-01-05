@@ -1,0 +1,107 @@
+extends ./layout.jade
+block content
+
+  script(type="text/javascript", language="javascript")
+    | window.date_start = "#{startdate.date_start}"
+    | window.is_begin = #{startdate.is_begin}
+
+  header.header  
+    .container.admin_page
+      h1.header_logo.pull-left.col-sm-3.col-xs-6
+        a.logo(href='/admin', title=language.header.main)
+      .text-center.col-sm-6.hidden-xs.hidden-sm
+        span.header_desc Панель победителей фотоконкурса
+      .pull-right.col-sm-3.col-xs-6.text-right(id="logout_place")
+      script(type="text/javascript", src="/static/views/admin/logout.js", language="javascript")
+
+  .main.admin_page
+    .background
+    .container.main_first-container
+      h1.text-center Панель победителей фотоконкурса
+      
+      .col-sm-12.margin_top_20  
+        .col-sm-3.text-center.margin_top_10
+          btn.btn-primary.btn.btn-block 9 марта - 16 марта
+        .col-sm-3.text-center.margin_top_10
+          btn.btn-primary.btn.btn-block 17 марта - 24 марта
+        .col-sm-3.text-center.margin_top_10
+          btn.btn-primary.btn.btn-block 25 марта - 1 апреля
+        .col-sm-3.text-center.margin_top_10
+          btn.btn-primary.btn.btn-block 2 апреля - 9 апреля
+
+
+      .col-sm-12.margin_top_20  
+        h2.text-center 9 марта - 16 марта
+        //- текущую неделю
+      .col-sm-12.margin_top_20  
+        h2.text-center Поиск участника по id
+
+        form.form_horizontal.border-no.margin_top_20.overflow_hidden
+        
+        .form-group
+          label.col-sm-3.col-xs-12.control-label.text-center.font_size_20  Поиск
+          .input-group.col-sm-8
+            input.form-control.phone(type="tel", placeholder="Введите телефон")
+            span.input-group-btn
+              button.btn.btn-secondary(type="button")
+                i.fa.fa-search
+          .col-xs-12.text-center.margin_top_20  
+            btn.btn-primary.btn Отмена
+
+
+      .col-sm-12.margin_top_20  
+        h2.text-center Таблица победителей
+        .table-response
+          table.table-condensed.table.table-striped.text-center
+            thead
+              tr
+                th.text-center Номер победителя
+                th.text-center ID
+                th.text-center Фотография
+                th.text-center Рекомендация
+                th.text-center Дата
+                th.text-center Телефон
+                th.text-center Действие
+            tbody
+              tr
+                td 1
+                //- по порядку, должно быть не более 15
+                td 45353454
+                td
+                  a.fansybox(href="ссылка на несжатую фотку, если есть, если нет - то обычную")
+                    img.img-responsive.table-img.img-thumbnail(alt="ID", src="ссылка га фотку")
+                td sdgfsdaffadsdfsajf dsfjdfsjaf
+                td 32.43.2015
+                td 79035454345
+                td 
+                  button.btn.btn-primary Удалить
+
+      .col-sm-12.margin_top_20  
+        h2.text-center Таблица участников
+        .table-response
+          table.table-condensed.table.table-striped.text-center
+            thead
+              tr
+                th.text-center ID
+                th.text-center Фотография
+                th.text-center Рекомендация
+                th.text-center Дата
+                th.text-center Телефон
+                th.text-center Действие
+            tbody
+              tr
+                //- по порядку, должно быть не более 15
+                td 45353454
+                td
+                  a.fansybox(href="ссылка на несжатую фотку, если есть, если нет - то обычную")
+                    img.img-responsive.table-img.img-thumbnail(alt="ID", src="ссылка га фотку")
+                td sdgfsdaffadsdfsajf dsfjdfsjaf
+                td 32.43.2015
+                td 79035454345
+                td 
+                  button.btn.btn-primary Выиграл
+
+        //- Стандартная пагинация
+
+
+

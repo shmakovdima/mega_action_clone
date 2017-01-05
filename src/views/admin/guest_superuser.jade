@@ -1,0 +1,204 @@
+extends ./layout.jade
+block content
+
+  header.header  
+    .container
+      h1.header_logo.pull-left.col-sm-3.col-xs-6
+        a.logo(href='/admin', title=language.header.main)
+      .text-center.col-sm-6.hidden-xs.hidden-sm
+        span.header_desc
+          Панель суперадминистратора         
+      .pull-right.col-sm-3.col-xs-6.text-right
+        button.header_logout.btn.btn-primary(title='Выход') Выход
+
+  .main.admin_page
+    .background
+      .container.main_first-container
+        h1.text-center Панель суперадминистратора
+
+        .item.col-md-6
+          h2.text-center Вес собранных вещей
+
+          table.table.table-striped.custab.text-center
+            thead
+              tr
+                th.text-center День 
+                th.text-center Вес (кг)
+            tr
+              td 09.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 10.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 11.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 12.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 13.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 14.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 15.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 16.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 17.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 18.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 19.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 20.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 21.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 22.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 23.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 24.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 25.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 26.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 27.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 28.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 29.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 30.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 31.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 01.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 02.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 03.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 04.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 05.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 06.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 07.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 08.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+            tr
+              td 09.03.16
+              td 
+                input.text-center(type=text, value="15.43", placeholder="Введите значение")
+
+        .form-horizontal.item.col-md-6
+          h2.text-center Старт акции
+        .form-horizontal.item.col-md-6
+         
+          .pull-left.col-sm-6
+            span Дата начала акции
+
+          .control-group.col-sm-6
+            .controls
+              .input-group
+                input.date.form-control(type="text", id="date_start", placeholder="Выберите дату")
+                label.input-group-addon(for="date_start")
+                  span.glyphicon.glyphicon-calendar
+
+        .form-horizontal.item.col-md-6
+
+          .pull-left.col-sm-6
+            span Включить акцию досрочно
+
+          .control-group.col-sm-6
+            .controls
+              .input-group
+                input.switch(type="checkbox", name="my-checkbox")
+
+        .form-horizontal.item.col-md-6
+          h2.text-center Ccылки на базы
+        .form-horizontal.item.col-md-6
+          a(href="",title="Зарегистрированные пользователи")
+            i.fa.fa-database Зарегистрированные пользователи
+
+        .form-horizontal.item.col-md-6
+          a(href="",title="Загруженные фотографии")
+            i.fa.fa-database Загруженные фотографии
+
+        .form-horizontal.item.col-md-6
+          a(href="",title="Сданные вещи")
+            i.fa.fa-database Сданные вещи
+
+        .form-horizontal.item.col-md-6
+          h2.text-center Экспорт
+
+        .form-horizontal.item.col-md-6.text-center
+          button.btn.btn-primary 
+            i.fa.fa-exchange Экспортировать
+            
+
+
+        
+            

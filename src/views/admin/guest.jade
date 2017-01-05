@@ -1,0 +1,23 @@
+extends ./layout.jade
+block content
+
+  header.header  
+    .container.admin_page
+      .col-xs-12
+        h1.header_logo.pull-left
+          a.logo(href='/admin', title=language.header.main)         
+        .pull-right
+          span.header_desc Вход
+
+  .main.admin_page
+    .background
+    .login_form
+      .login_form_account-wall
+        h2.text-center
+          span.black Вход
+        div(id="form_place")
+        script(type="text/javascript", src="/static/views/admin/login.js", language="javascript")
+
+    include ./includes/footer.jade
+  //- include ./includes/callback.jade
+

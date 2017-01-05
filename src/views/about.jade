@@ -1,0 +1,865 @@
+html
+  head
+    meta(charset=config.encoding)
+    meta(name="mailru-verification",content="71cbee74933b8e90" )
+    meta(http-equiv="X-UA-Compatible", content="IE=edge" )
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(property="og:type", content="website")
+    meta(property="og:title", content="МЕГА Меняйся!")
+    meta(property="og:url", content="http://change.megamall.ru/")
+    meta(property="og:description", content="С 9 марта по 9 апреля приноси ненужную одежду в МЕГУ, участвуй в онлайн-конкурсе и получай призы!")
+    script(type='text/javascript').
+          var host = window.location.host
+          if ((host=='http://90.156.143.200/') || (host=='90.156.143.200') || (host=='www.90.156.143.200') || (host=='https://90.156.143.200')) {
+          document.location.href='90.156.143.200:4000'
+          }
+    script(async="", src = "//www.google-analytics.com/analytics.js").
+
+    title= head.title
+    meta(property="title", content="#{head.meta.title}")
+    meta(property="description", content="#{head.meta.description}")
+    meta(property="keywords", content="#{head.meta.keywords}")
+
+    each src in config.scripts.common
+      script(type="text/javascript", src=src, language="javascript")
+    each href in config.styles.common
+      link(rel="stylesheet", href=href)
+    script(type="text/javascript")
+        | var tmp = "#{language_string}";
+        | window.language = JSON.parse(tmp.replace(/&quot;/g, '"'));
+        | var tmp2 = "#{city_string}";
+        | window.City = JSON.parse(tmp2.replace(/&quot;/g, '"'));
+    include includes/favicons.jade
+    //-link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+", crossorigin="anonymous")
+    block content
+  body.graph.graph2.scroll_spy.normal.body_about(data-spy="scroll", data-target="#spy")
+    .expert.main
+      .main_expert
+        header.navbar.navbar-default.navbar-fixed-top.hidden-md.hidden-lg.overflow_hidden
+          .row
+            .header_menu
+              .header_control.overflow_hidden
+                a(href="/" title="МегаМеняйся 2.0")
+                  img.pull-left.open_mega.pull-left(src="static/images/logo_mega_small_menu.png")
+                span.pull-right.text-right.mega_close +
+              .header_line
+                a.header_nav.active(href="/about", title="О проекте") О проекте
+              .header_line
+                a.header_nav(href="/calculate", title="Калькулятор") Калькулятор
+              .header_line
+                a.header_nav(href="/photo", title="Мнение экспертов") Мнение экспертов
+              .header_line.balance_mobile_place
+                script(type="text/javascript", src="/static/views/photo/balance_popup.js", language="javascript")
+                script(type="text/javascript", src="/static/views/photo/balance_mobile.js", language="javascript")
+            .col-sm-12
+                .counter.pull-left
+                  span.counter_desc собрано
+                  ul.text-center
+                    include components/counter_data.jade
+                  span.counter_desc Одежды
+                .pull-right
+                  img.open_menu(src="static/images/hamburger.png")
+
+                .navbar-header.pull-right
+                  a.navbar-brand.pull-right(href="/" title="МегаМеняйся 2.0")
+
+        header.navbar.navbar-default.hidden-xs.hidden-sm
+          .col-md-2.col-lg-3
+            .navbar-header
+           
+              a.navbar-brand(href="/" title="МегаМеняйся 2.0")
+            
+          .col-md-5.col-lg-5
+
+            a.header_nav.active(href="/about", title="О проекте") О проекте
+            a.header_nav(href="/calculate", title="Калькулятор") Калькулятор
+            a.header_nav(href="/photo", title="Мнение экспертов") Мнение экспертов
+
+          include components/counter.jade
+
+            .col-sm-12
+              .row
+                .counter.pull-left
+                  span.counter_desc собрано
+                  ul.text-center
+                    include components/counter_data.jade
+                  span.counter_desc Одежды
+                .pull-right 
+                  img.open_menu(src="static/images/hamburger.png", style="display: block; position: relative; padding-left: 20px; padding-top: 15px ")
+
+                .navbar-header.pull-right
+                  a.navbar-brand.pull-right(href="/" title="МегаМеняйся 2.0")
+
+
+      .col-sm-12(id="good")
+        .about_pre
+        .col-md-3.hidden-xs.hidden-sm
+          nav#spy.navbar.about_menu.margin_top_20.text-left.overflow_hidden(data-spy="affix")
+            .about_change
+            ul.nav.nav-tabs.nav-stacked
+              li.active
+                a.about_menu_item(title="Продолжаем делать мир лучше!", href="#good") Продолжаем делать<br> мир лучше!
+              li
+                a.about_menu_item(title="1 кг = 100 Р", href="#100") 1 кг = 100 Р
+              li
+                a.about_menu_item(title="Что станет с вещами?", href="#future") Что станет<br> с вещами?
+              li
+                a.about_menu_item(title="Как правильно сдавать ненужные вещи?", href="#need") Как правильно<br> сдавать ненужные<br> вещи?
+              li
+                a.about_menu_item(title="Куда отнести вещи?", href="#where") Куда отнести вещи?
+        .col-md-9
+          .row
+            .col-md-8
+              .row
+                h1.about_line.about_title Продолжаем <br>делать мир лучше!
+                span.about_text.about_text_1
+                  | Воодушевившись успехом первого этапа проекта 
+                  span.about_text_bolder  «Меняйся», МЕГА 
+                  | продолжает начатое важное дело по улучшению экологической ситуации на планете.
+                span.about_text.about_text_2
+                  | В прошлом году мы собрали 
+                  span.about_text_bolder 45 тонн одежды 
+                  | , которая пошла на благотворительность и переработку. 
+                  | В этом году у нас стало ещё больше партнеров — 
+                  | а значит больше возможностей принести пользу.
+                h2.about_aftertitle
+                  | Приносите вещи в МЕГУ.<br>
+                  | Вместе мы сделаем мир чище и красивее!
+            .col-md-4.hidden-xs.hidden-sm
+              a.about_tele(href="https://www.youtube.com/watch?v=6IXMUzSZ7Vk", title="Посмотреть<br>ролик о проекте")
+              a.about_tele_link.margin_top_20(href="https://www.youtube.com/watch?v=6IXMUzSZ7Vk", title="Посмотреть<br>ролик о проекте") Посмотреть<br>ролик о проекте 
+      .col-md-12.wow.fadeIn(id="100")
+        .weight.hidden-xs.hidden-sm
+        .journals.hidden-xs.hidden-sm
+        .col-md-3.hidden-xs.hidden-sm
+        .col-md-9.zindex_45
+          .row
+            .col-md-12
+              .row
+                h2.about_line.about_title.about_100 1 кг = 100
+                .overflow_hidden
+                  span.about_100_subtitle Теперь сдавать ставшие ненужными вещи стало еще выгоднее и удобнее — за каждый килограмм вещей вы получаете 100 рублей!  
+                    a.about_100_href.hidden-lg.hidden-md(href="/static/images/Change_rules.pdf",target="_blank", title="Правила") Правила
+                     a.about_100_href.margin_top_60.hidden-xs.hidden-sm(target="_blank",href="/static/images/Change_rules.pdf", title="Правила") Правила
+                  
+                .overflow_hidden
+                  span.copyright.link.text-left.margin_top_20(style="max-width: 600px; display: block") 
+
+                
+
+                .about_100_journal.hidden-md.hidden-lg
+          .row  
+            .row      
+              span.about_text.col-md-offset-2.col-md-4.about_text_3
+                | При первой сдаче каждый
+                br
+                | участник получит 
+                span.about_text_bolder брошюру со 
+                  br
+                  | скидками, журнал МЕГА Style
+                  br
+                  | и купон на 500 бонусных 
+                  br
+                  | баллов на MEGACARD
+                  br 
+                | (для новых пользователей)
+
+              .about_100_weight.hidden-lg.hiddem-md
+
+              span.about_text.col-sm-6.about_text_4
+                | Сдай больше 5 кг, прими участие в
+                br
+                a(title="Фото-конкурс", href="/photo") онлайн-конкурсе
+
+                |  и участвуй в
+                br
+                | розыгрыше главного приза —
+                br
+                span.about_text_bolder Модного гардероба на год!
+      .col-md-12.about_red_page.margin_top_100.overflow_hidden.hidden-xs.hidden-sm.wow.fadeIn
+        .col-md-4
+          .child
+            span.about_red_page_stat.pull-right Статистика
+
+          .helper
+        .col-md-8
+          .child.text-left
+            .graph_block(style="max-width: 900px; display: inline-block; padding-left: 70px;")
+              .graph_x_axis
+              .graph_y_axis
+              .graph_y_axis_1.graph_y_axis.hidden-xs
+              .graph_y_axis_2.graph_y_axis
+              .graph_y_axis_3.graph_y_axis.hidden-xs
+              .graph_bottom_title 9 марта
+              .graph_bottom_title.graph_bottom_title_1.hidden-xs.text-center.graph_bottom_title.graph_bottom_title_about 17 марта
+              .graph_bottom_title.graph_bottom_title_2.text-center.hidden-xs.graph_bottom_title_about 25 марта
+              .graph_bottom_title.graph_bottom_title_3.hidden-xs.text-center.graph_bottom_title_about 2 апреля
+              .graph_bottom_title.graph_bottom_title_1.hidden-xs.graph_bottom_title_top.text-center 28 225 кг
+              .graph_bottom_title.graph_bottom_title_2.graph_bottom_title_top.text-center.graph_bottom_title_about 99 107 кг
+              .graph_bottom_title.graph_bottom_title_3.hidden-xs.graph_bottom_title_top.text-center.graph_bottom_title_about 198 085 кг
+              .graph_bottom_title.right.text-center 9 апреля
+
+              .graph_right_title 0 кг
+              .graph_right_title.center 150 000 кг
+              .graph_right_title.top 300 000 кг
+              .graph_date
+                canvas(id="chart2" width="100%" height="275px")
+          .helper
+      .col-sm-12(id="future").wow.fadeIn
+        .col-md-3.hidden-xs.hidden-sm
+          .about_menu.margin_top_270.text-left.overflow_hidden
+            
+        .col-md-9
+          .row
+            h1.about_how_title.about_line.about_title Что станет с вещами?
+            span.about_text.about_text_24 Отнеси вещи, с которыми пришла пора проститься, в зону «Меняйся» в МЕГЕ — после этого новая жизнь начнется и у них, и у тебя.
+            .about_how_image.hidden-lg.hidden-md
+            .about_how.margin_top_40.hidden-xs.hidden-sm
+            .about_partners.margin_top_80.hidden-xs.hidden-sm
+
+            .about_how_partners.hidden-lg.hidden-md Партнеры проекта
+
+            .row.hidden-lg.hidden-md.about_how_partners_block
+              .panel-group(id="accordion")
+                .panel.panel-default
+                  .panel-heading(role="tab", id="heading1")
+                    .panel-title(data-toggle="collapse",data-parent="#accordion",href="#collapse1")
+                      .col-sm-12.overflow_hidden
+
+                        img(src="/static/images/about/mobile/blag.png" title="")
+                        span Проект
+                          br
+                          | благодарю
+                  #collapse1.panel-collapse.collapse.in.col-sm-12
+                    .col-sm-12
+                      | Социальный проект, созданный для помощи людям, которые попали в сложную жизненную ситуацию, включающий в себя прием бывших в употреблении вещей и их распределение между нуждающимися
+                .panel.panel-default
+                  .panel-heading(role="tab", id="heading2")
+                    .panel-title(data-toggle="collapse",data-parent="#accordion",href="#collapse2")
+                      .col-sm-12.overflow_hidden
+
+                        img(src="/static/images/about/mobile/charity.png" title="")
+                        span Charity Shop
+                  #collapse2.panel-collapse.collapse.col-sm-12
+                    .col-sm-12
+                      | Представлен двумя благотворительными магазинами и центром распределения, передает одежду в нуждающиеся семьи в 13 регионах и отправляет на переработку.
+
+                .panel.panel-default
+                  .panel-heading(role="tab", id="heading3")
+                    .panel-title(data-toggle="collapse",data-parent="#accordion",href="#collapse3")
+                      .col-sm-12.overflow_hidden
+
+                        img(src="/static/images/about/mobile/semi.png" title="")
+                        span Благотворительный фонд
+                          br
+                          | «Уральский Семицветик»
+                  #collapse3.panel-collapse.collapse.col-sm-12
+                    .col-sm-12
+                      |  Некоммерческая организация работает с многодетными и неполными семьями сельской местности Свердловской области, оказывает помощь в трудных жизненных ситуациях.
+
+                .panel.panel-default
+                  .panel-heading(role="tab", id="heading4")
+                    .panel-title(data-toggle="collapse",data-parent="#accordion",href="#collapse4")
+                      .col-sm-12.overflow_hidden
+
+                        img(src="/static/images/about/mobile/love.png" title="")
+                        span Детский благотворительный
+                          br
+                          | фонд «С любовью»
+                  #collapse4.panel-collapse.collapse.col-sm-12
+                    .col-sm-12
+                      | Детский благотворительный фонд «С любовью» Детский благотворительный фонд «С любовью» основан в 2010 году и на протяжении уже более 5 лет помогает людям, находящимся в сложной жизненной ситуации:  детям-сиротам, растущим в детских приютах; матерям-одиночкам, воспитывающим детей; одиноким пенсионерам и маленьким пациентам больниц г. Уфы.
+
+                .panel.panel-default
+                  .panel-heading(role="tab", id="heading5")
+                    .panel-title(data-toggle="collapse",data-parent="#accordion",href="#collapse5")
+                      .col-sm-12.overflow_hidden
+
+                        img(src="/static/images/about/mobile/voz.png" title="")
+                        span АНО «Возрождение»
+                  #collapse5.panel-collapse.collapse.col-sm-12
+                    .col-sm-12
+                      |  Некоммерческая организация осуществляет помощь людям, попавшим в трудную жизненную ситуацию, через центры реабилитации, где люди проходят курс восстановления. Также осуществляют помощь малоимущим и многодетным семьям.
+
+                .panel.panel-default
+                  .panel-heading(role="tab", id="heading6")
+                    .panel-title(data-toggle="collapse",data-parent="#accordion",href="#collapse6")
+                      .col-sm-12.overflow_hidden
+
+                        img(src="/static/images/about/mobile/spasibo.png" title="")
+                        span Благотворительный магазин<br> «Спасибо!»
+                  #collapse6.panel-collapse.collapse.col-sm-12
+                    .col-sm-12
+                      | Первый в России проект благотворительного магазина, который на данный момент объединяет четыре филиала, сеть контейнеров для сбора вещей по городу и центр выдачи вещей. За пять лет работы более 230 тонн вещей передано нуждающимся, более 4,5 млн рублей перечислено благотворительным фондам.
+
+                .panel.panel-default
+                  .panel-heading(role="tab", id="heading7")
+                    .panel-title(data-toggle="collapse",data-parent="#accordion",href="#collapse7")
+                      .col-sm-12.overflow_hidden
+
+                        img(src="/static/images/about/mobile/gusto.png" title="")
+                        span Магазин Gusto
+                  #collapse7.panel-collapse.collapse.col-sm-12
+                    .col-sm-12
+                      | Благотворительный магазин и Центр выдачи вещей, объединенные одним проектом. Переданные горожанами вещи отправляются нуждающимся лично и в 7 благотворительных организаций. Часть выручки магазина перечисляется в БФ "Живи".
+
+                .panel.panel-default
+                  .panel-heading(role="tab", id="heading8")
+                    .panel-title(data-toggle="collapse",data-parent="#accordion",href="#collapse8")
+                      .col-sm-12.overflow_hidden
+
+                        img(src="/static/images/about/mobile/soc.png" title="")
+                        span Центр социальной
+                          br
+                          | поддержки населения
+                  #collapse8.panel-collapse.collapse.col-sm-12
+                    .col-sm-12
+                      | Работает в Омске с 1 июля 1997 года. Центр оказывает социальную помощь гражданам города Омска. Подержанные вещи и другие материальные ценности предоставляются гражданам, находящимся в трудной жизненной ситуации, которую они не могут преодолеть самостоятельно.
+
+
+        .about_snake.hidden-xs.hidden-sm
+         
+      .col-sm-12.about_green_page.wow.fadeIn(id="need")
+        .col-sm-3.hidden-xs.hidden-sm
+        .col-md-9
+          h1.about_text_5.about_line.about_title Как правильно сдавать
+            br
+            | ненужные вещи
+
+          .col-sm-12.row.margin_top_40.hidden-lg.hidden-md
+            row
+
+              .col-sm-12.border_red
+                .about_feather
+                .half.overflow_hidden
+                  h2.about_need_title НЕТ!
+                  span.about_need_list.margin_top_20 носки 
+                  span.about_need_list дублёнки
+                  span.about_need_list обувь 
+                  span.about_need_list шубы
+
+                .half.overflow_hidden
+                  span.about_need_list.margin_top_50 нижнее бельё
+                  span.about_need_list кожаные изделия
+                  span.about_need_list купальники
+                  span.about_need_list сумки
+                  span.about_need_list пуховики
+
+              .row    
+                .col-sm-12.overflow_hidden
+                  h2.about_need_title.margin_top_30 ДА!
+                  .row
+                    .col-xs-6
+                      span.about_need_list чистая одежда
+                      span.about_need_list без видимых дефектов
+                      span.about_need_list любого размера
+                    .col-xs-6
+                      span.about_need_list для любого возраста
+                      span.about_need_list не более 5 кг в день и 15 кг за весь период акции
+
+              .row
+                .col-sm-12
+                  span.about_text.margin_top_20.about_text_7
+                    | Получите до 500 р. в день и до 1500 р. за весь период акции! 
+                    br
+                    | Первые 5 кг в день будут вознаграждены 500 р., а остальные станут безвозмездным пожертвованием. 
+                    br
+                    | Количество призов ограниченно
+
+              .about_pass.hidden-lg.hidden-md.margin_top_20
+                .about_pass_text Для начала
+                  br
+                  | постирай их 
+                  br
+                  | (гладить не обязательно)
+                .about_pass_text Отдельно сложи те
+                  br
+                  | вещи, что ещё
+                  br
+                  | можно носить
+                .about_pass_text Отнеси вещи в
+                  br
+                  | МЕГУ или в
+                  br
+                  | Мобильный пункт
+
+          .col-sm-12.row.margin_top_40.hidden-xs.hidden-sm
+            .row
+              .col15-sm-4
+                h2.about_need_title.margin_top_40 ДА!
+                span.about_need_list.margin_top_20 чистая одежда
+                span.about_need_list без видимых дефектов
+                span.about_need_list любого размера
+                span.about_need_list для любого возраста
+                span.about_need_list не более 5 кг в день и 15 кг<br>за весь период акции
+
+              .col15-sm-6.border_red
+                .about_feather
+                .half
+                  h2.about_need_title НЕТ!
+                  span.about_need_list.margin_top_20 носки 
+                  span.about_need_list дублёнки
+                  span.about_need_list обувь 
+                  span.about_need_list шубы
+
+                .half
+                  span.about_need_list.margin_top_50 нижнее бельё
+                  span.about_need_list кожаные изделия
+                  span.about_need_list купальники
+                  span.about_need_list сумки
+                  span.about_need_list пуховики
+            .row
+              .col-sm-12
+                span.about_text.margin_top_40.about_text_7
+                  | Получите до 500 р. в день и до 1500 р. за весь период акции! 
+                  br
+                  | Первые 5 кг в день будут вознаграждены 500 р., а остальные станут безвозмездным пожертвованием. 
+                  br
+                  | Количество призов ограниченно
+
+             
+            .row.padding_bottom_150.margin_top_100
+              .col15-sm-4
+                  .about_need_basket.about_need_item
+                  .about_need_gor
+                  .about_need_ver
+                  span.about_need_aftertext.text-left
+                    | Для начала постирай их 
+                    br
+                    | (гладить не обязательно)
+              .col15-sm-4
+                
+                  .about_need_stop.about_need_item
+                  .about_need_gor
+                  span.about_need_aftertext.text-left
+                    | Отдельно сложи те вещи,
+                    br
+                    | что ещё можно носить
+              .col15-sm-4
+                
+                  .about_need_bag.about_need_item
+                  span.about_need_aftertext.text-left
+                    | Отнеси вещи в МЕГУ 
+                    br
+                    | или в Мобильный пункт
+       
+
+          
+      .col-sm-12.wow.fadeIn(id="where")
+        span.spb.about_where.hidden-xs.hidden-sm(onclick="ga('send', 'event', 'click', 'click_am')") Санкт-петербург
+        span.mos.about_where.car.hidden-xs.hidden-sm(onclick="ga('send', 'event', 'click', 'click_am')") Москва
+        span.kaz.about_where.hidden-xs.hidden-sm(onclick="ga('send', 'event', 'click', 'click_am')") Казань
+        span.ros.about_where.car.hidden-xs.hidden-sm(onclick="ga('send', 'event', 'click', 'click_am')") Ростов-на-дону
+        span.adg.about_where.hidden-xs.hidden-sm(onclick="ga('send', 'event', 'click', 'click_am')") Адыгея-кубань
+        span.nig.about_where.hidden-xs.hidden-sm(onclick="ga('send', 'event', 'click', 'click_am')") Нижний Новгород
+        span.sam.about_where.car.hidden-xs.hidden-sm(onclick="ga('send', 'event', 'click', 'click_am')") Самара
+        span.ufa.about_where.car.hidden-xs.hidden-sm(onclick="ga('send', 'event', 'click', 'click_am')") Уфа
+        span.ekb.about_where.hidden-xs.hidden-sm(onclick="ga('send', 'event', 'click', 'click_am')") Екатеринбург
+        span.omsk.about_where.car.hidden-xs.hidden-sm(onclick="ga('send', 'event', 'click', 'click_am')") Омск
+        span.nov.about_where.hidden-xs.hidden-sm(onclick="ga('send', 'event', 'click', 'click_am')") Новосибирск
+        .col-sm-3.hidden-xs.hidden-sm
+
+
+        .col-md-9
+          h1.about_text_6.about_line.about_title Куда отнести вещи?
+          span.about_text.about_text_24.margin_top_10
+            | Отнеси вещи в ближайшую МЕГУ
+            br
+            | или в удобный Мобильный пункт:
+
+          .panel-group(id="accordion_2").hidden-md.hidden-lg.about_map.row
+            .row
+                .panel.panel-default
+                  .panel-heading(role="tab", id="headingmf1", onclick="ga('send', 'event', 'click', 'click_am')")
+                    .panel-title(data-toggle="collapse", data-parent="#accordion_2", href="#collapsem1")
+                      .col-sm-12.overflow_hidden
+                        span Москва
+                  #collapsem1.panel-collapse.collapse.col-sm-12
+                    .col-sm-12
+                      div.overflow_hidden
+                        .about_mega_title МЕГА Химки
+                        .about_mega_geo Московская область, г. Химки, микрорайон ИКЕА, корпус 2
+                        a.about_mega_get.margin_top_10(target="_blank", title="Как добраться", href="http://megamall.ru/khimki/routes/") Как добраться
+                        
+
+                        .about_mega_change Расписание пункта "Меняйся"
+                        .about_mega_worktime Время работы: 
+                          .about_mega_worktime_time 12:00-22:00
+                        .about_mega_worktime 9 Апреля: 
+                          .about_mega_worktime_time 10.00-22.00
+
+                        a.about_mega_get.margin_top_10(target="_blank", title="Расположение", href="http://megamall.ru/khimki/scheme/?point=5514") Расположение
+
+                        div
+                          .about_mega_sheldue Расписание мобильных пунктов
+                          d
+                          .about_mega_dates 
+                            span.active 15
+                            | ,  
+                            span 18
+                            |,  
+                            span 21
+                            | , 
+                            span 24
+                            | ,   
+                            span 27 
+                            div марта 
+
+                          .about_mega_change.adding Телефон супервайзера: 
+                            a(href="tel:89652240998", title="Телефон супервайзера") 89652240998 
+                            | (для уточнения графика работы мобильных пунктов)
+                   
+                          
+                          .about_mega_time.active(style="margin-top:10px")
+                            .about_mega_item
+                              .about_mega_times 13:00 - 15:00
+                              .about_mega_place м. Сходненская, ул. Яна Райниса, 1
+                            .about_mega_item
+                              .about_mega_times 15:15 - 16:45
+                              .about_mega_place м. Планерная, ул. Планерная, 5
+                            .about_mega_item
+                              .about_mega_times 17:20 - 19:00
+                              .about_mega_place м. Речной Вокзал, ул. Фестивальная, 13-17
+
+
+                          .about_mega_time(style="margin-top:10px")
+                            .about_mega_item
+                              .about_mega_times 13:00 - 15:00
+                              .about_mega_place м. Сходненская, ул. Яна Райниса, 1
+                            .about_mega_item
+                              .about_mega_times 15:15 - 16:45
+                              .about_mega_place м. Планерная, ул. Планерная, 5
+                            .about_mega_item
+                              .about_mega_times 17:20 - 19:00
+                              .about_mega_place м. Речной Вокзал, ул. Фестивальная, 13-17
+
+                          .about_mega_time(style="margin-top:10px")
+                            .about_mega_item
+                              .about_mega_times 13:00 - 15:00
+                              .about_mega_place м. Сходненская, ул. Яна Райниса, 1
+                            .about_mega_item
+                              .about_mega_times 15:15 - 16:45
+                              .about_mega_place м. Планерная, ул. Планерная, 5
+                            .about_mega_item
+                              .about_mega_times 17:20 - 19:00
+                              .about_mega_place м. Речной Вокзал, ул. Фестивальная, 13-17
+
+                          .about_mega_time(style="margin-top:10px")
+                            .about_mega_item
+                              .about_mega_times 13:00 - 15:00
+                              .about_mega_place м. Сходненская, ул. Яна Райниса, 1
+                            .about_mega_item
+                              .about_mega_times 15:15 - 16:45
+                              .about_mega_place м. Планерная, ул. Планерная, 5
+                            .about_mega_item
+                              .about_mega_times 17:20 - 19:00
+                              .about_mega_place м. Речной Вокзал, ул. Фестивальная, 13-17
+
+                          .about_mega_time(style="margin-top:10px")
+                            .about_mega_item
+                              .about_mega_times 11:00 - 12:30
+                              .about_mega_place м. Сходненская, ул. Яна Райниса, 1
+                            .about_mega_item
+                              .about_mega_times 12:45 - 14:15
+                              .about_mega_place м. Планерная, ул. Планерная, 5
+                            .about_mega_item
+                              .about_mega_times 14:55 - 16:15
+                              .about_mega_place м. Речной Вокзал, ул. Фестивальная, 13-17
+                            .about_mega_item
+                              .about_mega_times 16:55 - 18:00
+                              .about_mega_place Химки, ул. Горшина, 1
+                         
+                      div.overflow_hidden
+                        .about_mega_title МЕГА Теплый Стан 
+                        .about_mega_geo г.Москва, п.Сосенское, Калужское шоссе 21км (или 41км МКАД)
+                        a.about_mega_get.margin_top_10(target="_blank",title="Как добраться", href="http://megamall.ru/teplyi_stan/routes/") Как добраться
+
+                        
+
+                        .about_mega_change Расписание пункта "Меняйся"
+                        .about_mega_worktime Время работы: 
+                          .about_mega_worktime_time 12:00-22:00
+
+                        a.about_mega_get.margin_top_10(target="_blank", title="Расположение", href="http://megamall.ru/teplyi_stan/scheme/?point=5526") Расположение   
+
+                        div
+                          .about_mega_sheldue Расписание мобильных пунктов
+                          .about_mega_dates 
+                            span.active 16
+                            | ,  
+                            span 19
+                            | , 
+                            span 22
+                            |,  
+                            span 25
+                            | , 
+                            span 28 
+                            div марта 
+
+                          .about_mega_change.adding Телефон супервайзера: 
+                            a(href="tel:89652240998", title="Телефон супервайзера") 89652240998 
+                            | (для уточнения графика работы мобильных пунктов)
+
+                          .about_mega_time.active(style="margin-top:10px")
+                            .about_mega_item
+                              .about_mega_times 13:00 - 15:00
+                              .about_mega_place ул. Чертановская, 20 к2 
+                            .about_mega_item
+                              .about_mega_times 15:15 - 17:00
+                              .about_mega_place ул. Красного Маяка, 2
+                            .about_mega_item
+                              .about_mega_times 17:40 - 19:00
+                              .about_mega_place ул. Островитянова, 32
+
+                          .about_mega_time(style="margin-top:10px")
+                            .about_mega_item
+                              .about_mega_times 14:00 - 15:30
+                              .about_mega_place пр-т Вернадского,  86 с 1А
+                            .about_mega_item
+                              .about_mega_times 16.00-17.30
+                              .about_mega_place ул. Профсоюзная, 104
+                            .about_mega_item
+                              .about_mega_times 17:50 - 19:30
+                              .about_mega_place Новоясеневский пр-т, 1Б к1
+                            .about_mega_item
+                              .about_mega_times 20:00 - 21:00
+                              .about_mega_place ул. Тарусская, 5 к1
+
+                          .about_mega_time(style="margin-top:10px")
+                            .about_mega_item
+                              .about_mega_times 13:00 - 15:00
+                              .about_mega_place ул. Чертановская, 20 к2 
+                            .about_mega_item
+                              .about_mega_times 15:15 - 17:00
+                              .about_mega_place ул. Красного Маяка, 2
+                            .about_mega_item
+                              .about_mega_times 17:40 - 19:00
+                              .about_mega_place ул. Островитянова, 32
+
+                          .about_mega_time(style="margin-top:10px")
+                            .about_mega_item
+                              .about_mega_times 13:00 - 15:00
+                              .about_mega_place ул. Чертановская, 20 к2 
+                            .about_mega_item
+                              .about_mega_times 15:15 - 17:00
+                              .about_mega_place ул. Красного Маяка, 2
+                            .about_mega_item
+                              .about_mega_times 17:40 - 19:00
+                              .about_mega_place ул. Островитянова, 32
+
+                          .about_mega_time(style="margin-top:10px")
+                            .about_mega_item
+                              .about_mega_times 13:00 - 15:00
+                              .about_mega_place ул. Чертановская, 20 к2 
+                            .about_mega_item
+                              .about_mega_times 15:15 - 17:00
+                              .about_mega_place ул. Красного Маяка, 2
+                            .about_mega_item
+                              .about_mega_times 17:40 - 19:00
+                              .about_mega_place ул. Островитянова, 32
+
+
+                      div.overflow_hidden
+                        .about_mega_title МЕГА Белая Дача
+                        .about_mega_geo Московская обл., Люберецкий р-н, г. Котельники, 1-й Покровский пр-д, д. 5, (14-йкм МКАД)
+
+                        a.about_mega_get.margin_top_10(target="_blank", title="Как добраться", href="http://megamall.ru/belaya_dacha/routes/") Как добраться 
+
+                        
+
+                        .about_mega_change Расписание пункта "Меняйся"
+                        .about_mega_worktime Время работы: 
+                          .about_mega_worktime_time 10:00-20:00
+
+                        a.about_mega_get.margin_top_10(target="_blank", title="Расположение", href="http://megamall.ru/belaya_dacha/scheme/?point=5516") Расположение       
+                        
+
+                        div
+                          .about_mega_sheldue Расписание мобильных пунктов
+                          .about_mega_dates 
+
+                            span.active 17
+                            | ,  
+                            span 20
+                            | , 
+                            span 23
+                            |,  
+                            span 26
+                            | , 
+                            span 29 
+                            div марта
+
+                          .about_mega_change.adding Телефон супервайзера: 
+                            a(href="tel:89652240998", title="Телефон супервайзера") 89652240998 
+                            | (для уточнения графика работы мобильных пунктов) 
+
+                          .about_mega_time.active(style="margin-top:10px")
+                            .about_mega_item
+                              .about_mega_times 13:00 - 14:30
+                              .about_mega_place м. Братиславская, ул. Перервы, 43
+                            .about_mega_item
+                              .about_mega_times 15:00 - 16:30
+                              .about_mega_place м. Кузьминки, Волгоградский проспект, д. 84, к.1
+                            .about_mega_item
+                              .about_mega_times 17:00 - 18:30
+                              .about_mega_place м. Рязанский проспект, Рязанский пр-т, 75
+                            .about_mega_item
+                              .about_mega_times 18:45 - 20:00
+                              .about_mega_place м. Выхино, ул. Хлобыстова, 5
+
+                          .about_mega_time(style="margin-top:10px")
+                            .about_mega_item
+                              .about_mega_times 11:00 - 12:30
+                              .about_mega_place м. Братиславская, ул. Перервы, 43
+                            .about_mega_item
+                              .about_mega_times 13:00 - 14:30
+                              .about_mega_place м. Кузьминки, Волгоградский проспект, д. 84, к.1
+                            .about_mega_item
+                              .about_mega_times 15:00 - 16:30
+                              .about_mega_place м. Рязанский проспект, Рязанский пр-т, 75
+                            .about_mega_item
+                              .about_mega_times 16:15 - 18:00
+                              .about_mega_place м. Выхино, ул. Хлобыстова, 5
+
+                                           
+                          .about_mega_time(style="margin-top:10px")
+                            .about_mega_item
+                              .about_mega_times 13:00 - 14:30
+                              .about_mega_place м. Братиславская, ул. Перервы, 43
+                            .about_mega_item
+                              .about_mega_times 15:00 - 16:30
+                              .about_mega_place м. Кузьминки, Волгоградский проспект, д. 84, к.1
+                            .about_mega_item
+                              .about_mega_times 17:00 - 18:30
+                              .about_mega_place м. Рязанский проспект, Рязанский пр-т, 75
+                            .about_mega_item
+                              .about_mega_times 18:45 - 20:00
+                              .about_mega_place м. Выхино, ул. Хлобыстова, 5
+
+                          .about_mega_time(style="margin-top:10px")
+                            .about_mega_item
+                              .about_mega_times 11:00 - 12:30
+                              .about_mega_place м. Братиславская, ул. Перервы, 43
+                            .about_mega_item
+                              .about_mega_times 13:00 - 14:30
+                              .about_mega_place м. Кузьминки, Волгоградский проспект, д. 84, к.1
+                            .about_mega_item
+                              .about_mega_times 15:00 - 16:30
+                              .about_mega_place м. Рязанский проспект, Рязанский пр-т, 75
+                            .about_mega_item
+                              .about_mega_times 16:15 - 18:00
+                              .about_mega_place м. Выхино, ул. Хлобыстова, 5
+
+                          .about_mega_time(style="margin-top:10px")
+                            .about_mega_item
+                              .about_mega_times 13:00 - 14:30
+                              .about_mega_place м. Братиславская, ул. Перервы, 43
+                            .about_mega_item
+                              .about_mega_times 15:00 - 16:30
+                              .about_mega_place м. Кузьминки, Волгоградский проспект, д. 84, к.1
+                            .about_mega_item
+                              .about_mega_times 17:00 - 18:30
+                              .about_mega_place м. Рязанский проспект, Рязанский пр-т, 75
+                            .about_mega_item
+                              .about_mega_times 18:45 - 20:00
+                              .about_mega_place м. Выхино, ул. Хлобыстова, 5
+
+
+                .panel.panel-default
+                  .panel-heading(role="tab", id="headingmf2", onclick="ga('send', 'event', 'click', 'click_am')")
+                    .panel-title(data-toggle="collapse",data-parent="#accordion_2",href="#collapsem2")
+                      .col-sm-12.overflow_hidden
+                        span Санкт-петербург
+                  #collapsem2.panel-collapse.collapse.col-sm-12
+                    .col-sm-12
+                      .about_mega_title МЕГА Дыбенко
+                      .about_mega_geo Ленинградская область, Всеволожский район, Мурманское шоссе, 12 км
+                      a.about_mega_get.margin_top_10(target="_blank", title="Как добраться", href="http://megamall.ru/dybenko/routes/") Как добраться
+
+
+                      .about_mega_change Расписание пункта "Меняйся"
+                      .about_mega_worktime Время работы: 
+                        .about_mega_worktime_time 10:00-22:00
+
+                      a.about_mega_get.margin_top_10(target="_blank", title="Расположение", href="http://megamall.ru/dybenko/scheme/?point=5527") Расположение 
+
+                      .about_mega_title.margin_top_20 МЕГА Парнас
+                      .about_mega_geo  Ленинградская область, Всеволожский район, пересечение КАД (кольцевой автодороги) и проспекта Энгельса
+                      a.about_mega_get.margin_top_10(target="_blank", title="Как добраться", href="http://megamall.ru/parnas/routes/") Как добраться
+
+                      .about_mega_change Расписание пункта "Меняйся"
+                      .about_mega_worktime Время работы: 
+                        .about_mega_worktime_time 10:00-22:00
+
+                      a.about_mega_get.margin_top_10(target="_blank", title="Расположение", href="http://megamall.ru/parnas/scheme/?point=5528") Расположение 
+
+                .panel.panel-default
+                  .panel-heading(role="tab", id="headingmf3")
+                    .panel-title(data-toggle="collapse",data-parent="#accordion_2",href="#collapsem3")
+                      .col-sm-12.overflow_hidden
+                        span Остальные города
+                  #collapsem3.panel-collapse.collapse.col-sm-12(style="padding: 0px!important")
+                    .panel.panel-default(style="padding: 0px!important")
+                      .col-sm-12.overflow_hidden
+                        include ./components/about_panels.jade
+
+          
+      .col-sm-12.wow.fadeIn
+        .row
+          .expert_up
+          footer.navbar-bottom.hidden-sm.hidden-xs.mainpage
+            .col-md-3.text-center-sm.hidden-sm.hidden-xs
+              span.copyright © ООО "ИКЕА Сентерс Рус Менеджмент" 2016
+
+            .col-md-4.text-center-sm.hidden-sm.hidden-xs 
+
+
+            .col-md-5.text-center-sm
+              .pull-left
+                a.footer_rules(title="Правила",target="_blank", href="/static/images/Change_rules.pdf") Правила
+              .pull-right.text-nowrap
+                ul.social-icons.text-left
+                  li 
+                    a.fb(href="javascript:void(0)", title="Мы в Facebook", onclick="Share.facebook(share_url, share_title ,share_img, share_text, 'footer')")
+
+                  li 
+                    a.vk(href="javascript:void(0)", title="Мы в ВКонтакте", onclick="Share.vkontakte(share_url, share_title ,share_img, share_text, 'footer')")
+                  li 
+                    a.ok(href="javascript:void(0)", title="Мы в Одноклассниках", onclick="Share.odnoklassniki(share_url, share_text, 'footer')")
+                  li 
+                    a.tw(href="javascript:void(0)", title="Мы в Твиттере", onclick="Share.twitter(share_url,  share_text, 'footer')")
+
+
+          footer.hidden-lg.hidden-md
+            .col-md-12.text-center.overflow_hidden(style="margin-top: 5px;")
+              .col-xs-6
+                a.footer_rules(title="Правила", href="/static/images/Change_rules.pdf") Правила
+              .col-xs-6
+
+            .col-md-6.text-center-sm.margin_top_10
+              
+              ul.social-icons.text-center-sm.col-md-6.text-center-xs
+                li 
+                  a.fb(href="javascript:void(0)", title="Мы в Facebook", onclick="Share.facebook(share_url, share_title ,share_img, share_text, 'footer')")
+
+                li 
+                  a.vk(href="javascript:void(0)", title="Мы в ВКонтакте", onclick="Share.vkontakte(share_url, share_title ,share_img, share_text, 'footer')")
+                li 
+                  a.ok(href="javascript:void(0)", title="Мы в Одноклассниках", onclick="Share.odnoklassniki(share_url, share_text, 'footer')")
+                li 
+                  a.tw(href="javascript:void(0)", title="Мы в Твиттере", onclick="Share.twitter(share_url,  share_text, 'footer')")
+            .col-md-12.text-center-sm.hidden-md.hidden-lg.text-center-xs
+              
+
+            .col-md-6.text-center-sm.hidden-md.hidden-lg.text-center-xs
+              span.copyright © ООО "ИКЕА Сентерс Рус Менеджмент" 2016
+
+            script (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-5557003-14','auto');ga('send','pageview');
+            noscript
+              iframe(src="//www.googletagmanager.com/ns.html?id=GTM-MBVCDN", height="0", width="0",style="display:none;visibility:hidden")
+            script  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MBVCDN');
+
+  include ./components/graph_popup.jade
+  include ./components/popup_nocart.jade
+  include ./components/about_popups.jade
+  

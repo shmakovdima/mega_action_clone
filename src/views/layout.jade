@@ -1,0 +1,43 @@
+html
+  head
+
+    meta(charset=config.encoding)
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="mailru-verification",content="71cbee74933b8e90" )
+    meta(http-equiv="X-UA-Compatible", content="IE=edge" )
+    script(type='text/javascript').
+      var host = window.location.host
+      if ((host=='http://90.156.143.200/') || (host=='90.156.143.200') || (host=='www.90.156.143.200') || (host=='https://90.156.143.200')) {
+      document.location.href='90.156.143.200:4000'
+      }
+
+    meta(property="og:type", content="website")
+    meta(property="og:title", content="МЕГА Меняйся!")
+    meta(property="og:url", content="http://change.megamall.ru/")
+    meta(property="og:image", content="http://change.megamall.ru/static/images/share.png")
+    meta(property="og:description", content="Выиграй 100 000 р. на модные перемены!")
+    script(type='text/javascript').
+      var host = window.location.host
+      if ((host=='http://90.156.143.200/') || (host=='90.156.143.200') || (host=='www.90.156.143.200') || (host=='https://90.156.143.200')) {
+      document.location.href='90.156.143.200:4000'
+      }
+
+    script(async="", src = "//www.google-analytics.com/analytics.js").
+
+    title= head.title
+    meta(property="title", content="#{head.meta.title}")
+    meta(property="description", content="#{head.meta.description}")
+    meta(property="keywords", content="#{head.meta.keywords}")
+
+    each src in config.scripts.common
+      script(type="text/javascript", src=src, language="javascript")
+    each href in config.styles.common
+      link(rel="stylesheet", href=href)
+    script(type="text/javascript", language="javascript")
+        | var tmp = "#{language_string}";
+        | window.language = JSON.parse(tmp.replace(/&quot;/g, '"'));
+        | var tmp2 = "#{city_string}";
+        | window.City = JSON.parse(tmp2.replace(/&quot;/g, '"'));
+    include includes/favicons.jade
+    //-link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+", crossorigin="anonymous")
+    block content

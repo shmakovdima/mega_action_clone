@@ -1,0 +1,130 @@
+@import '../variables.styl'
+
+.navbar
+  &-bottom
+    position: absolute
+    bottom 15px
+    margin-bottom 0
+   
+.normal 
+  .main 
+  .expert 
+    .footer
+      &_rules
+        text-decoration underline
+        opacity 0.7
+        font-size 14px
+        cursor pointer
+        margin-right 28px
+        position relative
+        
+        &:hover
+          opacity 1
+          
+        &_react
+          opacity 0.9
+          
+      &_container
+        &_big
+          width 161px
+          height 67px
+          left 0px
+          position absolute
+          bottom -40px
+          display block
+          background url(images/container_big.png) no-repeat
+
+    footer   
+      width 100%
+       
+      &.navbar-fixed-bottom
+        padding 15px 0px 15px 15px
+        z-index 45 
+        line-height 10px
+        
+        .mainpage
+          padding-bottom 0px
+      &
+        .copyright
+          color white
+          opacity 0.6
+          text-transform uppercase
+          font-size 12px
+          line-height 14px
+
+          &.expert
+            color #9f9e94
+            opacity 1
+            visibility visible
+          
+          &.link
+            visibility visible
+            opacity 1
+            text-transform none
+
+        .social-icons
+          display inline-block
+          list-style none
+          padding-left 0px
+          
+          & li
+            display inline-block
+            margin 0px 10px
+            
+            & a
+              display inline-block
+              color white
+              width 15px
+              height 15px
+              background-position center
+              background-repeat no-repeat
+              background-size contain
+              line-height 16px
+              text-align center
+            
+              &.fb
+                background-image url(images/fb.png)
+          
+              &.vk
+                background-image url(images/vk.png)
+              
+              &.ok
+                background-image url(images/ok.png)
+                
+              &.tw
+                background-image url(images/twitter.png)
+
+
+
+
+@media (max-width:  991px)
+
+  .normal  
+    & .main
+      & footer 
+        
+        &.navbar-fixed-bottom
+          padding 0px
+          
+        & .social-icons
+          width 100%
+
+        & .social-icons li a
+          height 20px
+          width 20px   
+          margin-top 20px
+      
+        & .copyright
+          line-height 60px
+          
+          &.link
+            line-height 20px
+            top 8px
+            position relative
+            
+            
+
+            
+
+
+        

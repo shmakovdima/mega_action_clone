@@ -1,0 +1,47 @@
+global:
+  error: "Error"
+  success: "Success"
+header:
+  main: "Main"
+  exit: "exit"
+  module:
+    name: "Module for collectors"
+enter:
+  login: "Login"
+  nologin: "You don't enter password "
+  password: "Password"
+  nopassword: "You don't enter password "
+  submit: "enter"
+  error: "Login or Password is incorrect"
+upload:
+  header: "Upload your documents"
+  form: "Drag & drop"
+  browse: "browse"
+  deal: "Handle"
+  file:
+    nottype: "incorrect type of file"
+result:
+  header: "Results"
+  error: "You don't download the document"
+  back: "Back to uploading form"
+  name: "Name"
+  date: "Date of publication"
+  number: "Number of deal"
+  judge: "Judge"
+  decision: "Decision"
+  active: "Motive"
+  notfound: "Not found"
+  send: "Send documents"
+  file: "Name of file"
+file:
+  status:
+    uploading: "Uploading"
+    uploaded: "Uploaded"
+  submit:
+    error: "Error parse"
+    uploading: "Uploading to ABBYY Cloud"
+    uploaded: "Parse"
+    downloading: "Downloading from ABBYY Cloud"
+    done: "Done"
+footer:
+  mail: "Contact with us"  

@@ -1,0 +1,855 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic-ext,latin-ext,cyrillic')
+
+import_tree('./mixins')
+import_tree('./components')
+
+@import 'variables.styl'
+
+/* Global styles*/
+.wow
+  visibility hidden
+
+.main
+  width 100%
+  height 100%
+  background-repeat no-repeat
+  background-position center
+
+
+  &&_page
+    background-image url(images/background_main.png)
+    background-size cover
+    
+  &&_expert
+    background-size 100% auto
+    height auto
+    
+    
+  &_expert
+    z-index 300
+    position relative
+      
+  &_blue
+    sdfsdf sdffds
+
+  
+  &.timer
+    background-image url(images/backround.png)
+    background-size cover
+    
+  .girl
+    position absolute
+    top 60px
+    bottom 90px
+    left 0px
+    width 100%
+    background-repeat no-repeat
+    background-size contain
+    z-index 0
+    background-image url(images/girl.png)
+    background-position left center
+    
+    &.girl_index
+      background-image url(images/girl_main.png)
+      top 0px
+
+    &.girl_photo
+      background-image url(images/photo.png)
+      background-position right center
+      background-size  auto
+      
+/*Cчетчик наверху*/
+
+.counter
+  user-select none
+  border-radius 2px
+  background-color  #ffc064
+  width 200px
+  margin-left 26px
+  margin-top -25px
+  cursor pointer
+  height 106px
+  padding-top 15px
+  padding-bottom 15px
+  сursor pointer
+  
+  
+  &_brackets
+    position absolute
+    background url(images/counter.png)
+    width 6px
+    height 42px
+    margin-left 18px
+    margin-top -32px
+    
+    &+.counter_brackets
+      margin-left 152px
+  
+
+  &_main_page
+    margin-left 5px
+  
+
+  & ul
+    display inline-block
+    zoom 1
+    list-type none
+    padding-left 0px
+    width 100%
+    padding-top 0px
+    padding-bottom 0px
+    margin-left -4px
+    
+    &:after
+      content "кг"
+      position absolute
+      color white
+      font-size 16px
+      font-family DINPro-Medium
+      margin-left 5px
+      margin-top 8px
+
+    & li
+      display inline-block
+      border-radius 2px
+      background-color white
+      width 23px
+      margin-left 1px
+      margin-right 1px
+      height 33px
+      font-size 25px
+      line-height 23px
+      color  #14718f
+      font-family PlayfairDisplay-Bold
+      
+      &.lefted
+        margin-right 9px
+
+      &:first-child:before
+      &:last-child:before
+      &.lefted:before
+        content ""
+        position absolute
+        margin-left -2px
+        margin-top 15px
+        display block
+        position absolute
+        width 2px
+        height 4px
+        background-color white
+        
+       &:last-child:before
+        margin-left 23px    
+      
+       &.lefted:before
+         margin-left 27px
+         width 3px
+         height 3px 
+      
+
+  &_desc
+    color #14718f
+    font-size 14px
+    line-height 14px
+    padding-bottom 8px
+    display block
+    position relative
+    width 100%
+    text-align center
+    text-transform uppercase
+    font-family DINPro-Medium
+
+
+.main
+  /*Основная страница*/ 
+    
+  &_small_ruble
+    display block
+    position relative
+    background url(images/ruble.png)
+    float right
+    width 13px
+    height 12px
+    top 4px
+    background-position right center
+    background-size contain
+    background-repeat no-repeat
+
+
+  &_dates
+  &_win  
+    font-size 22px
+    line-height 26px
+    transform scaleX(1.0037)   
+    margin-top 20px
+    display block
+    opacity 0.9
+
+  &_dates
+    
+    &:before
+      position absolute
+      content ""
+      background-color  #da6e77
+      width 70px
+      height 1px 
+      top -20px
+    
+    &.red_page:before
+      background-color color_orange
+    
+    &.mod_404
+      font-size 22px
+      line-height 28px
+
+  &_cost
+   font-family pfdintextcondpro-regular
+   text-transform uppercase
+   line-height 48px
+   font-size 58px
+   background-image url(images/ruble_big.png)
+   background-position right center
+   background-repeat no-repeat
+   padding-right 40px
+   margin-top 15px 
+   position relative
+   display inline-block
+   
+   & i
+     font-size 50px
+     
+   &_multi
+     font-family DINPro-Medium
+     font-size: 18px
+     width 43px
+     top 5px
+     height 43px
+     line-height 43px
+     display inline-block
+     position absolute
+     right -55px
+     background url(images/firefox-bug-round.png)
+  
+  &_win
+    font-size 21px
+    opacity 0.9
+    margin-top 5px
+    
+    &.aftertext
+      font-size 12px
+      line-height 16px
+      margin-top 10px
+      max-width 350px
+
+  &_icons
+   width 100%
+   height 64px
+   display inline-block
+   margin-top 25px
+   background-position left center
+   background-repeat no-repeat
+   background-image url(images/more_icons.png)
+  
+  &_reg
+    margin-top 60px
+    
+    &_left
+      margin-top 30px
+    &_right
+      margin-top 110px
+      
+    
+  &_aftertext
+    font-size: 16px;
+    line-height: 18px;
+    margin-top 15px
+    padding-left 15px
+    display block
+    position relative
+    opacity 1
+    
+
+  .counter_date 
+    width 243px
+    margin-top -65px 
+    
+    &_label
+      text-align center
+      width 100%
+      display block
+      font-size 18px
+      font-family pfdintextcondpro-medium
+      line-height 50px
+      opacity 1
+      text-transform uppercase
+      
+    & ul
+      display inline-block
+      zoom 1
+      width 100%
+      padding-left 11px
+      
+      
+      & li
+        list-type none
+        display  inline-block
+        width 127px
+        background-image url(images/counter_big.png)
+        background-position top center
+        background-repeat no-repeat
+        height 126px
+        
+        & span
+          height 100%
+          line-height 76px
+          color  #f2bd66
+          font-family PlayfairDisplay-Bold
+          font-size 107px
+         
+          margin-left -8px
+          display block
+      
+      & + span
+        display inline-block
+        line-height 28px
+        padding-left 0px
+
+    &_background
+      width 125px
+      height 135px
+    
+    &_opacity
+      margin-top -134px
+      margin-left 2px
+      background-position center
+      background-repeat no-repeat
+      background-image url(images/counter_opacity.png)
+      width 109px
+      height 60px
+      position relative
+
+
+
+.weight
+  position absolute
+  right 0px
+  height 800px
+  width 100%
+  background-image url("images/about/weight.png")
+  background-position right bottom
+  background-repeat no-repeat
+  
+.journals
+  position absolute
+  width 100%
+  height 900px
+  z-index 34
+  left 0px
+  background-image url("images/about/journals.png")
+  background-position left bottom
+  background-repeat no-repeat
+
+#where
+  height 992px
+  background-image url("images/about/map4.png")
+  background-position right center
+  background-repeat no-repeat
+
+.normal .open_menu
+  cursor  pointer
+  display block 
+  position relative
+  padding-left 20px
+  padding-top 15px 
+  z-index 5
+  
+.normal .mega_close
+  cursor pointer
+  color #000000
+  width 20px
+  height 20px
+  font-size 27px
+  transform rotate(45deg)
+  line-height 14px
+
+
+.border_red .about_need_list
+  background-image: url(images/about/before_red.png)
+  
+.border_red
+  width 354px
+
+h1.about_title
+h2.about_title
+  font-size 48px
+  font-family PlayfairDisplay-Bold
+  line-height 52px
+  position relative
+  margin-top 80px
+  color white
+  text-transform none
+      
+
+
+@media (min-width:  992px) and (max-height: 767px) 
+
+  .normal
+    
+    h1
+      font-size 30px
+      padding-bottom 15px
+      line-height 34px
+
+    .form-group
+      margin-bottom 5px
+
+    .popup
+      
+      & .child
+        
+        & span
+          min-height 20px!important
+          line-height 20px!important
+          height 20px!important
+          
+        & .popup
+           
+          &_prereg_mega
+             
+            & span   
+              font-size 14px!important
+              min-height 26px!important
+              line-height 26px!important
+              height 26px!important
+      
+              &.my_mega
+                height 40px!important
+            
+            & button
+              margin-top 130px
+      
+      .child
+        min-height 570px!important
+
+    .main
+    .expert
+      .navbar 
+      
+        &-default
+          
+          .decloration
+            line-height 57px    
+
+      & .counter
+        margin-top -20px
+        padding-top 10px
+        height 100px
+
+      &_dates
+      $_win
+        font-size 16px
+        margin-top 10px
+        line-height 24px
+      
+      &_dates
+        &:before
+          top -8px
+      
+      &_icons
+        margin-top 20px
+        height 47px
+        background-size contain
+        
+      &_reg
+        margin-top 15px
+
+      &_cost
+        font-size 40px
+        padding-right 28px
+        background-image url(images/ruble.png)
+
+        & i
+          font-size 36px
+          
+      &_aftertext
+        font-size 14px
+        line-height 18px
+
+
+    
+@media (max-width:  991px)
+
+  .normal
+    .main
+      &_aftertext
+        padding-left 92px
+        
+      &_win
+        &.aftertext
+          max-width 450px
+          width 450px
+          display block
+          position relative
+          margin-left auto
+          margin-right auto
+
+  
+  .wow
+    visibility visible!important
+    opacity 1
+    animation-name none
+  
+  .normal .popup.popup_expert
+    height auto!important
+
+  .normal .expert_left_before
+    display none
+    
+  .col15-lg-12
+    width 100%
+
+  .normal
+    .main
+    .expert
+    .about
+      
+
+      .header_menu .balance_mobile_place .header_nav
+          line-height 35px
+          text-align center
+          
+          border-radius 12px
+          border-width 2px
+          border-color  #d2656d
+          border-style dotted
+          width 156px
+          height 39px
+          cursor pointer
+          text-center
+          color #000000
+          font-size 14px
+
+      &_right_before
+        top -9px
+
+      .header
+        
+        
+          
+        &_menu
+          display none
+          background white 
+          box-shadow 1px 2px 54px 0px rgba(28, 36, 51, 0.38) 
+          z-index 23 
+          position absolute 
+          left 0px 
+          top 0px  
+          width 100% 
+
+          &.active
+            display block
+      
+        &_control
+          padding 15px
+
+        &_line
+          border-top 1px solid rgba(29, 135, 165, 0.22)
+          padding-left 15px
+          padding-top 6px
+          padding-bottom 6px
+
+          
+        &_balance
+          line-height 33px
+          border-radius 12px
+          border-width 2px
+          border-color  #d2656d
+          border-style dotted
+          width 156px
+          height 39px
+          cursor pointer
+          text-center
+          color #000000
+          font-size 14px
+          
+      
+        &_nav
+          color #000000
+          font-size 16px
+          width 100%
+          display block
+          
+          &.active
+            color #d8646f
+          
+      .photo_small
+        position absolute
+        top 0px
+        left 0px
+        width 100%
+        height 100%
+        background url("images/photo_small.png") right center no-repeat 
+        
+      .footer_container_big
+        position relative
+        display block
+        bottom 0px
+        width 219px
+        height 113px
+        margin 0 auto
+        background url("images/container_small.png")
+      
+      .redblock
+        background url("images/bg_mainpage_small_red.png")
+        background-position top center
+        background-size cover
+        top -37px
+        padding-top 52px
+        
+      & &_reg
+        margin-top 45px!important
+        
+      &_reg
+        margin-top 45px!important
+      
+      &_down
+        background url("images/down_button.png")
+        background-position center right
+        background-repeat no-repeat
+        padding-right 30px
+        text-align right
+
+      & .navbar-default
+        position absolute
+    
+      &_icons
+        background-position center
+        
+
+      &.main_page
+        height auto
+        background-image url("images/small_girl.png")
+        background-position right 10px
+        background-size auto
+        background-repeat no-repeat 
+        
+
+      
+      & .counter
+        display inline-block
+        margin-top 30px
+        margin-left 0px  
+      
+        &_date 
+          position relative
+          margin 0 auto
+          margin-right auto 
+          margin-top 20px 
+          overflow hidden
+          width 210px
+          
+          &_label
+            width auto
+            display inline
+            float left
+            padding-right 15px
+            line-height 56px
+          
+          & ul
+            width 52px
+            float left
+            padding-left 0px
+            display inline-block
+            
+            & li
+              background-position center
+              background-image url(images/counter_sm.png)
+              width 58px
+              height 63px  
+              
+              & span
+                font-size 50px
+                line-height 46px
+                margin-top -5px
+                margin-left -6px
+                
+            & + span
+              line-height 56px
+              padding-left 15px
+              
+
+              
+          &_opacity
+            width 52px
+            height 29px
+            margin-left 0px
+            margin-top -44px
+            backround url(images/counter_opacity_small.png)       
+          
+      & .decloration 
+        vertical-align text-bottom
+        padding-right 15px
+        font-size 16px
+        line-height 6
+        position relative
+        padding-top -69px
+        
+    
+@media (max-width:  767px) 
+  .normal
+    .main
+      
+      &_aftertext
+        padding-left 15px
+        float left
+        width 100%
+        clear left
+
+      &_win
+        &.aftertext
+          font-size 12px
+          margin-top 10px
+          width auto
+          float left
+          
+  .normal .popup .child.child_check .close_popup
+    right -40px
+
+  .normal .popup .child button.callback, .normal .popup .child input[type=submit].callback
+    left 55px
+    position relative
+    float left
+    bottom auto
+    
+  .normal .popup .child_about span.close_popup
+    display none!important
+
+  .normal
+    .main
+    .expert
+      & .counter_date 
+        float left 
+        width 100%
+      
+     
+      &_icons
+       width 100%
+       height 64px
+       display inline-block
+       margin-top 25px
+       background-position left!important
+       background-image url(images/more_icons.png)
+       background-size contain
+      
+
+@media (max-width:  450px)
+
+  
+  .normal   
+    .child h1 
+      font-size 28px 
+      line-height 32px  
+      padding-bottom 0px
+            
+    .main
+      animation-name none!important
+      visibility visible!important
+      opacity 1!important
+      
+      
+      &_aftertext
+        padding-left 15px
+            
+      &_dates
+      &_win  
+        font-size 16px
+        
+      &_win
+        &.aftertext
+          float left
+        
+
+      &_dates:before
+        width 44px
+        height 1px 
+        top -10px
+        
+      &_cost
+       line-height 48px
+       font-size 42px
+       margin-top 10px 
+       display inline-block
+       width auto
+       padding-right 28px
+       background-image url(images/ruble.png) 
+       
+
+       & i
+         font-size 36px
+      &_reg
+        margin-top 25px!important
+        
+      &_icons
+        height 44px
+      
+      &_win
+        font-size 16px
+        opacity 0.9
+        margin-top 0px
+        
+        
+      &_aftertext
+        font-size: 16px;
+        line-height: 18px;
+        margin-top 15px
+        padding-left 15px
+        display block
+        position relative
+        opacity 0.9 
+    
+      & .counter
+        margin-top 0px
+  
+  .normal
+    .main
+      &_win
+        &.aftertext
+          font-size 12px
+          margin-top 10px
+          width auto
+
+
+
+
+@media (min-width:  1350px) 
+  .main 
+    & .counter_date
+      width 450px
+    
+
+@media (min-width:  1550px) 
+  .main
+    .counter_date
+      width 550px
+
+@media (max-width:  1200px) 
+  .normal .header_nav + .header_nav
+    margin-left 20px!important
+    
+  .normal .calc_block
+    width 150px
+    right -30px
+    
+
+    
+@media (max-width:  1400px)
+  .normal .calc_block
+      width 200px
+      right -30px     
+    
+@media (max-width:  1300px) 
+  .normal .calc_block
+      width 170px
+      right -30px
+      
+

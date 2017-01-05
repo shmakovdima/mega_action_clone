@@ -1,0 +1,897 @@
+.normal
+  &.expert_body
+    
+    background-position top center
+    background-size cover
+    background-repeat no-repeat
+    background rgb(220, 103, 121)
+  .expert
+    color #000000
+    background transparent
+    
+    .main
+      visibility visible
+
+    /*Blocks*/
+     
+    &_body
+      position relative 
+      
+      & .row
+         -moz-column-width: 14em
+         column-width: 14em
+         -webkit-column-width: 14em
+         -moz-column-gap: 4px
+         -webkit-column-gap: 4px
+         
+         
+      & button
+        margin-top 60px
+        height 40px
+        margin-left auto
+        margin-right auto
+        display block
+        margin-bottom 150px
+        float none
+        border-radius 15px
+        position relative
+        line-height 32px
+
+    &_item
+      position relative
+      vertical-align top
+      display inline-block
+      width 100%
+      float none
+      
+      &_block
+        float left
+        display block
+        
+        &:hover
+          .expert_item_share
+            opacity 1
+            
+            &.bottom_share
+              display none
+              
+      &_title
+        position relative
+        width 100%
+        float left
+        
+        &_img
+          height 63px
+          margin-top -15px
+          float left
+          width 63px
+          display block
+          background-size cover
+          border-radius 50%
+          border 4px solid white
+
+        &_text
+          font-family PlayfairDisplay-Italic
+          font-size 16px
+          float left
+          margin-left 15px
+          margin-top 20px
+          
+
+      &_share
+        position absolute
+        bottom -50px
+        z-index 5
+        right 12px
+        opacity 0
+        transition 300ms all ease-in
+        
+        & .soc
+          cursor pointer
+          height 32px
+          width 32px
+          background-repeat no-repeat
+          background-position center
+          display block
+          margin-bottom 7px
+          background-position center
+          
+          &:not(.share)
+            opacity 0
+
+          &.vk
+            background-image url("images/expert/vk.png")
+            margin-bottom 23px
+          &.ok
+            background-image url("images/expert/ok.png")
+          &.tw
+            background-image url("images/expert/tw.png")
+          &.fb
+            background-image url("images/expert/fb.png")
+            
+          &.share
+            transition 200ms all ease-in
+            background-image url("images/expert/share.png")
+            
+        &:hover
+          
+          .soc
+            opacity 1
+            
+          .soc.share
+            background-image url("images/expert/share_active.png")
+
+      &_img
+        position relative
+        border 1px solid transparent
+
+      &_text
+        color black
+        font-size 16px
+        margin-top 10px
+        float left
+        font-family PlayfairDisplay-Regular
+        line-height 22px
+
+
+      &_footer
+        position relative
+        padding-right 30px
+        padding-left 30px
+        padding-bottom 30px
+        margin-bottom 3px
+        float left
+
+      &_status
+        position absolute
+        bottom 30px
+        left -2px
+        height 31px
+        width 100%
+        background-repeat no-repeat
+
+      &_ok 
+        
+        & .expert_item_footer
+          border 1px solid transparent
+          border-bottom 1px solid color_mega_green
+        
+        &:hover .expert_item_footer
+          border-left 1px solid color_mega_green
+          border-right 1px solid color_mega_green
+        
+        &:hover .expert_item_img
+          border-left 1px solid color_mega_green
+          border-right 1px solid color_mega_green
+          border-top 1px solid color_mega_green           
+          
+        & .expert_item_status 
+          background-image url(images/expert/ok_result.png)
+          
+      &_win
+        & .expert_item_footer
+          border 1px solid transparent
+          border-bottom 1px solid #ffc064
+        
+        &:hover .expert_item_footer
+          border-left 1px solid #ffc064
+          border-right 1px solid #ffc064
+          
+        &:hover .expert_item_img
+          border-left 1px solid #ffc064
+          border-right 1px solid #ffc064
+          border-top 1px solid #ffc064   
+          
+        & .expert_item_status
+          background-image url(images/expert/winners.png)
+          
+
+      &_winnermain
+        
+        & .expert_item_title_img
+          background-image url(images/expert/exp3.png)
+
+        & .expert_item_footer
+          border 1px solid transparent
+          border-bottom 1px solid #ff4a5a
+        
+        &:hover .expert_item_footer
+          border-left 1px solid #ff4a5a
+          border-right 1px solid #ff4a5a
+          
+        &:hover .expert_item_img
+          border-left 1px solid #ff4a5a
+          border-right 1px solid #ff4a5a
+          border-top 1px solid #ff4a5a   
+          
+        & .expert_item_status
+          background-image url(images/expert/main_winners.png)
+
+      &_no  
+        & .expert_item_footer
+          border 1px solid transparent
+          border-bottom 1px solid color_mega_red
+          
+        &:hover .expert_item_footer
+          border-left 1px solid color_mega_red
+          border-right 1px solid color_mega_red
+          
+        &:hover .expert_item_img
+          border-left 1px solid color_mega_red
+          border-right 1px solid color_mega_red
+          border-top 1px solid color_mega_red
+          
+        & .expert_item_status
+          background-image url(images/expert/no_result.png)
+
+        
+    &_block
+      background #f6f3e3
+      
+    
+    &_left
+      &_before
+        position absolute
+        width 100%
+        height 12px
+        top -6px
+        left 0px
+        right 0px
+        background url(images/expert/left_top.png)
+        background-repeat no-repeat
+        background-size 100%
+    
+    &_right
+      background #fefbec
+      min-height 1500px
+
+      &_before
+        position absolute
+        width 100%
+        height 24px
+        top -15px
+        left 0px
+        right 0px
+        background url(images/expert/right_top.png)  
+        background-size 100%
+        background-repeat no-repeat
+        
+    /*Left column*/  
+    &_menu
+      margin-left auto
+      margin-right auto
+      margin-top 60px
+      width 120px
+      display block
+      text-transform uppercase
+      
+      &_item
+        color black
+        clear left
+        float left
+        font-size 14px
+        line-height 15px  
+        margin-bottom 26px  
+
+
+        &.active
+          font-family DINPro-Black
+          padding-left 15px
+          border-left 1px solid rgba(1, 1, 1, 0.39)
+          
+          &:hover
+            opacity 1
+
+    
+    &_journal
+      display block
+      width 120px
+      margin-top 200px
+      margin-left auto
+      margin-right auto
+      
+      &_img
+        width 102px
+        margin-left -7px
+        height 114px
+        display block
+        background-repeat no-repeat
+        background url(images/expert/journal.png)
+        
+      &_upload
+        width 29px
+        height 24px
+        margin-bottom 7px
+        margin-top 30px
+        display block
+        position relative
+        background url(images/expert/download.png)
+
+      &_href
+        font-size 16px
+        text-decoration underline
+        line-height 24px
+        padding-top 7px
+        display block
+        color black
+        display block
+        text-transform uppercase
+        
+        &_2
+          color black
+          font-size 16px
+          line-height 24px
+          display block
+          font-family DINPro-Light
+          text-decoration underline
+        
+      &_desc
+        color black
+        font-size 12px
+        font-family DINPro-Light
+        line-height 20px
+        
+    /*Center column*/
+      
+    &_center
+      padding 45px
+      
+      &_subtitle
+        position relative
+        color black
+        font-size 30px
+        font-family PlayfairDisplay-Regular
+        line-height 32px
+        display block
+        text-transform uppercase
+        margin-top 21px
+        position relative
+        display block
+        
+      &_description
+        color black
+        font-family PlayfairDisplay-Regular
+        line-height 28px
+        display block
+        max-width 510px
+        position relative
+        font-size 20px
+        
+        & a
+          text-decoration underline
+
+      &_filter
+        
+        &_hidden
+          position absolute
+          height 0px
+          overflow hidden
+          top 0px
+          left 0px
+          border 1px solid transparent
+          width 100%
+          z-index 5
+          background white
+          opacity 0
+          transition 300ms all ease-in
+
+          & span
+          & div
+            color black
+            user-select(none)
+            text-transform uppercase
+            line-height 24px
+            font-size 14px
+            display block
+            width 100%
+            padding-left 15px
+            padding-right 15px
+            
+            span
+              display inline
+              text-align center
+              padding 0px
+
+            &:hover
+              background-color color_blue
+              color white
+              
+              & span
+                color white
+            
+            &.city
+              color color_blue
+              
+              &:hover
+                color color_blue
+                background white
+        
+        &-block
+          border-bottom 1px solid black
+          position relative
+          
+          cursor pointer
+          
+          &.visible .expert_center_filter_hidden
+            height auto
+            opacity 1
+           
+            
+        &-title
+          cursor pointer
+          overflow hidden
+          color black
+          font-size 20px
+          user-select(none)
+          background-position right center
+          background-position calc(100% - 15px) center
+          background-repeat no-repeat
+          background-image url(images/expert/more.png)
+          padding 10px 20px
+          padding-top 5px
+          display block
+          font-family DINPro-Light
+          transition 300ms all ease-in
+          
+          &:hover
+            opacity 0.7
+          &_sub
+            font-family DINPro-Light
+            font-size 18px
+            color #686868
+          
+      
+
+    &_header
+      color black
+      font-family PlayfairDisplay-Bold
+      line-height 52px
+      text-transform none
+      font-size 48px
+      
+      & span
+        color black
+        font-family PlayfairDisplay-Bold
+        line-height 52px
+        text-transform none
+        font-size 48px
+      
+    &_red
+      padding-left 45px
+      padding-bottom 150px
+      position relative
+      margin-right -15px
+      
+    &_cart
+      position relative
+      background url("images/expert/mega_cart.png")
+      background-position 118px bottom
+      padding-bottom 110px
+      z-index 45
+      background-repeat no-repeat
+      
+      & .main_dates
+        font-family DINPro-Light
+        font-size 18px
+        line-height 20px
+        opacity 1
+        &:before
+          display none
+      
+      & .main_cost
+        font-size 54px
+        opacity 1
+        
+        &_multi
+          font-size 18px
+          text-transform none
+          color color_orange
+          background-repeat no-repeat
+          background: url("images/expert/ff-bug.png")
+          
+      & .main_win
+        font-size 18px
+        line-height 20px
+        font-family DINPro-Light
+        opacity 1
+    
+    &_line:before
+      position absolute
+      content ""
+      background-color color_orange
+      width 55px
+      height 1px 
+      top -20px
+      
+
+
+    &_getlook
+      margin-top 110px
+      position relative
+      cursor pointer
+      padding-top 50px
+      padding-bottom 60px
+      background: url("images/expert/get_look.png")
+      background-repeat no-repeat
+      background-position 70px bottom
+      transition 300ms all ease-in
+     
+
+      &_text
+        
+        font-family DINPro-Bold
+        color white
+        position relative
+        margin-top -40px
+        font-size 18px
+        line-height 22px
+        text-transform uppercase
+    
+    &_text
+      margin-top 100px
+      position relative
+      
+      & span
+        font-family PlayfairDisplay-Regular
+        font-size 18px
+        line-height 24px
+        color white
+        
+        &.font_play_bold
+          font-family PlayfairDisplay-Bold
+    
+    &_person
+      
+      &_item
+        float left
+        position relative
+        clear left
+        width 100%
+
+      &_img
+        width 96px
+        height 96px
+        border-radius 50%
+        background-position center
+        margin-right 22px
+        background-size cover
+        float left
+        display block
+        position relative
+        margin-bottom 30px
+        
+        &_1
+          background-image url(images/expert/exp_2.png)
+        &_2
+          background-image url(images/expert/exp_3.png)
+        &_3
+          background-image url(images/expert/expert_photo.png)
+
+      &_title
+        font-family PlayfairDisplay-Italic
+        font-size 18px
+        display block
+        float left
+        clear right
+        color white
+        display block
+        width calc(100% - 130px)
+        margin-top 5px
+        margin-bottom 0px
+        
+      &_description
+        font-family PlayfairDisplay-Regular
+        color white
+        float left
+        position relative
+        font-size 14px
+        transform: scaleY(1.0018)
+        line-height 18px
+        display block
+        max-width 170px
+        margin-top 7px
+        
+    &_up
+      background-position center
+      width 30px
+      z-index 400
+      background-size cover
+      background-repeat no-repeat
+      height 30px
+      background-image url(images/up_button.png)
+      bottom 95px
+      right 15px
+      cursor pointer
+      opacity 0
+      transition 350ms all ease-in
+      position fixed
+      
+      &.active
+        opacity 1
+
+        &:hover
+          opacity 0.7
+      
+
+@media (max-width:  991px)
+
+
+  .expert_red.overflow_hidden
+    overflow visible
+    padding-left 0px
+    height 0px
+    padding-bottom 30px
+
+  .normal
+    
+    &.expert_body
+      background rgb(220, 98, 117)
+      background-image none
+      
+      & .row
+         -moz-column-width initial
+         column-width initial
+         -webkit-column-width initial
+         -moz-column-gap initial
+         -webkit-column-gap initial
+      
+    .expert
+      
+      &_footer
+        margin-top -136px
+      
+      &_person
+        
+        &_title
+        &_description
+          color black
+          
+        &_item
+          float none
+          width 320px
+          display block
+          margin-left auto
+          margin-right auto
+          position relative
+          
+        &_description
+          & span
+          & a
+            color black
+          
+          & a
+            text-decoration underline
+            float left
+        
+        &_img
+          margin-bottom 25px
+      
+      &_cart
+        width 320px
+        margin-left auto
+        margin-right auto
+        background url(images/expert/mega_cart.png) 90px bottom no-repeat
+        padding-bottom: 137px
+      
+      &_getlook
+        top -300px
+        width 230px
+        margin-left auto
+        margin-right auto
+        
+        &_text
+          color black
+          
+          & span
+            color black
+      
+      &_left
+        width 100%
+        padding-right 15px
+        
+      &_block
+        background transparent
+        
+        & h1
+          width 290px
+          display block
+          margin-right auto
+          margin-left auto
+          font-size 24px
+        
+      &_center
+        padding 0px
+        padding-bottom 1px
+        
+        &_subtitle
+          max-width 405px
+          display block
+          position relative
+          margin-left auto
+          margin-right auto
+        
+        &_filter
+          &-block
+            max-width 405px
+            margin-left auto
+            margin-right auto
+        
+        &_experttext 
+          display block
+          padding-left 150px
+          background-image url(images/expert/mobile/look.png)
+          background-repeat no-repeat
+          background-position left top
+          max-width 320px
+          margin-left auto
+          margin-right auto
+          margin-top 20px
+          padding-bottom 32px
+
+          & span
+            color black
+            width 100%
+            font-size 14px
+            font-family PlayfairDisplay-Regular
+            line-height 18px
+            
+            &.font_play_bold
+              font-family PlayfairDisplay-Bold
+
+        
+        &_description
+          font-size 16px
+          line-height 20px
+          margin-right 25px
+          display block
+          margin-right auto
+          margin-left auto
+          max-width 405px
+          
+          & span
+          & a
+            color black
+
+          
+      &_right
+        padding-top 40px
+        top -40px
+        
+        &_nobutton
+          padding-bottom 100px
+        
+      &_menu
+        margin-top 20px
+        width 100%
+        border-top 1px solid #ffc064
+        border-bottom 1px solid #ffc064
+        padding-top 10px
+        padding-bottom 10px
+        margin-bottom 30px
+
+        &_item
+          color white
+          width 33.3%
+          text-align center
+          clear none
+          margin-bottom 0px 
+          
+        
+          &.active
+            font-family DINPro-Medium
+            border-left none
+            color #ffc064
+            padding-left 0px
+            
+      &_body 
+        & button
+          margin-bottom 170px
+          
+      &_item
+        &_img
+          .expert_item_share
+            display none
+            
+        &_footer
+          .expert_item_share.bottom_share
+            opacity 1
+            display block
+            
+            &:hover
+              display block
+            
+            &.bottom_share
+              display block
+              position relative
+              width 100%
+              bottom 0px
+              right 0px
+              opacity 1
+              display inline-block
+              text-align center
+            
+            .soc:not(.share)
+              opacity 1
+              width 45px
+              margin-bottom 7px
+              margin-right 5px
+              margin-left 5px
+              margin-top 20px
+              height 45px
+              display inline-block
+              
+              &.vk
+                background-image url("images/expert/mobile/vk.png")
+              &.ok
+                background-image url("images/expert/mobile/ok.png")
+              &.tw
+                background-image url("images/expert/mobile/tw.png")
+              &.fb
+                background-image url("images/expert/mobile/fb.png")
+                
+
+@media (max-width:  450px)
+  .normal
+    .expert
+      &_center
+        &_subtitle
+          text-align left!important   
+          
+      &_menu
+      
+        &_item
+          
+          &_1
+            text-align left
+            width 27%
+          
+          &_2
+            text-align center
+            width 36%
+          
+          &_3
+            text-align right 
+            width 37% 
+                
+
+@media(min-width: 1200px)
+  .normal
+    .expert
+      &_body
+        position relative 
+        
+        & .row
+           -moz-column-width: 18em
+           column-width: 18em
+           -webkit-column-width: 18em
+           -moz-column-gap: 4px
+           -webkit-column-gap: 4px
+
+@media(min-width: 1700px)
+  .normal
+    .expert
+       
+      &_body
+        position relative 
+        
+        & .row
+           -moz-column-width: 24em
+           column-width: 24em
+           -webkit-column-width: 24em
+           -moz-column-gap: 4px
+           -webkit-column-gap: 4px
+           
+@media(min-width: 1900px)
+  .normal
+    .expert
+       
+      &_body
+        position relative 
+        
+        & .row
+           -moz-column-width: 20em
+           column-width: 20em
+           -webkit-column-width: 20em
+           -moz-column-gap: 4px
+           -webkit-column-gap: 4px
+         

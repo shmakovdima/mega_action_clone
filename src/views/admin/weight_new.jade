@@ -1,0 +1,114 @@
+extends ./layout.jade
+block content
+
+  header.header  
+    .container.admin_page
+      h1.header_logo.pull-left.col-sm-3.col-xs-6
+        a.logo(href='/admin', title=language.header.main)
+      .text-center.col-sm-6.hidden-xs.hidden-sm
+        span.header_desc Замер веса
+      .pull-right.col-sm-3.col-xs-6.text-right(id="logout_place")
+      script(type="text/javascript", src="/static/views/admin/logout.js", language="javascript")
+
+  .main.admin_page
+    .background
+    .container.main_first-container
+      h1.text-center.overflow_hidden Замер веса
+      form.form_horizontal.border-no.margin_top_20.overflow_hidden
+        .form-group
+          label.col-sm-3.col-xs-12.control-label.text-center.font_size_20  Поиск
+          .input-group.col-sm-8
+            input.form-control.phone(type="tel", placeholder="Введите телефон")
+            span.input-group-btn
+              button.btn.btn-secondary(type="button")
+                i.fa.fa-search
+      form.form_horizontal.border-no.overflow_hidden
+        h2.text-center.overflow_hidden Фильтры
+        .form-group.col-sm-12
+          label.col-sm-3.col-xs-12.control-label.text-center.font_size_20  Время
+          label.col-xs-1.control-label.text-center.font_size_20 c
+          .col-xs-3
+            <input ref="date_start" type="text" className="date form-control" id="date_start" name="date_start" placeholder="Выберите дату" defaultValue={window.date_start} />
+          label.col-xs-1.control-label.text-center.font_size_20 по
+          .col-xs-3
+             <input ref="date_end" type="text" className="date form-control" id="date_start" name="date_start" placeholder="Выберите дату" defaultValue={window.date_end} />
+             //- эти инпуты даты надо связать
+        .form-group.margin_top_20.col-sm-12
+          label.col-sm-3.col-xs-12.control-label.text-center.font_size_20  Выберите мегу
+          .col-sm-9
+            //- и мобильные и все
+           //- <select onChange={@handleEdit} ref="mega" data-width="100%" defaultValue={@props.user.mega}>
+            //-  <option value="0">Тёплый стан</option>
+            //-  <option value="1">Белая Дача</option>
+            //-  <option value="2">Химки</option>
+            //-  <option value="3">Дыбенко</option>
+            //-  <option value="4">Парнас</option>
+            //-  <option value="5">Адыгея-Кубань</option>
+            //-  <option value="6">Екатеринбург</option>
+            //-  <option value="7">Казань</option>
+            //-  <option value="8">Нижний Новгород</option>
+            //-  <option value="9">Новосибирск</option>
+            //-  <option value="10">Омск</option>
+            //-  <option value="11">Ростов-на-Дону</option>
+            //-  <option value="12">Самара</option>
+            //-  <option value="13">Уфа</option>
+            //-</select>  
+
+      
+      h2.text-center.overflow_hidden Всего 220 кг от 132 участников
+      //- все кг и сколько участников
+      .overflow_auto.table-responsive
+        table.table-bordered.table.table-striped
+          thead
+            tr
+              th.text-center Фамилия
+              th.text-center Имя
+              th.text-center Телефон
+              th.text-center Дата сдачи
+              th.text-center Cданный вес
+              th.text-center ID точки 
+              th.text-center Действие
+          tbody
+            tr 
+              td.text-center Шмаков
+              td.text-center Дима
+              td.text-center 89035742365
+              td.text-center Тут дата
+              //- а вот эти можно менять - заккомментил
+              td
+                <input onBlur={@handleEdit} ref="email" type="text" defaultValue={@props.user.email} className="text-center" />
+              td
+
+                //- тут снова выбор мег - заккоментил
+                //-  <select onChange={@handleEdit} ref="mega" data-width="100%" defaultValue={@props.user.mega}>
+                  <option value="0">Тёплый стан</option>
+                  <option value="1">Белая Дача</option>
+                  <option value="2">Химки</option>
+                  <option value="3">Дыбенко</option>
+                  <option value="4">Парнас</option>
+                  <option value="5">Адыгея-Кубань</option>
+                  <option value="6">Екатеринбург</option>
+                  <option value="7">Казань</option>
+                  <option value="8">Нижний Новгород</option>
+                  <option value="9">Новосибирск</option>
+                  <option value="10">Омск</option>
+                  <option value="11">Ростов-на-Дону</option>
+                  <option value="12">Самара</option>
+                  <option value="13">Уфа</option>
+                //-  </select>
+              //- </td>
+              
+              td.text-center
+                //- Удаление
+                //- <span onClick={@handleRemove} className="remove">+</span>
+
+
+        //- Стандартная пагинация
+
+            
+
+
+
+      
+    include ./includes/footer.jade
+  include ./includes/callback.jade

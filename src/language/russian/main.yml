@@ -1,0 +1,54 @@
+global:
+  error: "Ошибка"
+  success: "Успешно"
+header:
+  main: "Главная"
+  exit: "Выйти"
+  module:
+    name: "модуль для коллекторов"
+enter:
+  login: "Логин"
+  nologin: "Вы не ввели логин"
+  password: "Пароль"
+  nopassword: "Вы не ввели пароль"
+  submit: "Войти"
+  error: "Логин или пароль введены неверно"
+upload:
+  header: "Загрузите ваши документы"
+  form: "Перенесите документы"
+  browse: "Просмотреть"
+  deal: "Обработать"
+  file:
+    nottype: "Некорректный тип файла"
+result:
+  header: "Результаты"
+  error: "Вы не загрузили документы"
+  back: "Вернуться к загрузке документов"
+  name: "Наименование"
+  date: "Дата издания"
+  number: "Номер дела"
+  judge: "Судья"
+  decision: "Решение"
+  active: "Мотив"
+  notfound: "Не найдено"
+  send: "Отправить документы"
+  file: "Название файла"
+file:
+  status:
+    uploading: "Загружается"
+    uploaded: "Загружено"
+  submit:
+    error: "Ошибка распознавания"
+    uploading: "Загружается в облако ABBYY"
+    uploaded: "Распознается"
+    downloading: "Скачивается с облака ABBYY"
+    done: "Готово"
+footer:
+  mail: "Связаться с нами"
+
+
+share:
+  vk: ""
+  fb: "Share.facebook('http://change.megamall.ru', '«Академия Перемен» МЕГИ с Владом Лисовцом', 'http://change.megamall.ru/soc2.jpg', 'Пройди онлайн-курс и выиграй 50 000 рублей на перемены от МЕГИ и другие призы!')"
+  tw: ""
+  ok: ""

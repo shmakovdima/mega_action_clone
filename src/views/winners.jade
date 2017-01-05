@@ -1,0 +1,275 @@
+html
+  head
+
+    meta(charset=config.encoding)
+    script(type='text/javascript').
+          var host = window.location.host
+          if ((host=='http://90.156.143.200/') || (host=='90.156.143.200') || (host=='www.90.156.143.200') || (host=='https://90.156.143.200')) {
+          document.location.href='90.156.143.200:4000'
+          }   
+    meta(name="mailru-verification",content="71cbee74933b8e90" )
+    meta(http-equiv="X-UA-Compatible", content="IE=edge" )
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(property="og:type", content="website")
+    meta(property="og:title", content="Эксперт моды оценил мой лук!")  
+    meta(property="og:url", content="#{og_url}")
+    meta(property="og:image", content="#{og_image}")
+    meta(property="og:image:width", content="1230")
+    meta(property="og:image:height", content="630")
+    meta(property="og:description", content="Получи совет от одного из экспертов моды проекта “Меняйся”! Загрузи свой лук на change.megamall.ru и получи шанс выиграть одну из карт “МЕГА Подарок” на 3000 р.!")
+
+    script(async="", src = "//www.google-analytics.com/analytics.js").
+
+    title= head.title
+    meta(property="title", content="#{head.meta.title}")
+    meta(property="description", content="#{head.meta.description}")
+    meta(property="keywords", content="#{head.meta.keywords}")
+    meta(name="msapplication-TileColor", content="#d8646f")
+      
+    each src in config.scripts.common
+      script(type="text/javascript", src=src, language="javascript")
+    each href in config.styles.common
+      link(rel="stylesheet", href=href)
+    script(type="text/javascript", language="javascript")
+      | var tmp = "#{language_string}";
+      | window.language = JSON.parse(tmp.replace(/&quot;/g, '"'));
+      | var tmp2 = "#{city_string}";
+      | window.City = JSON.parse(tmp2.replace(/&quot;/g, '"'));
+    include includes/favicons.jade
+    meta(name="theme-color", content="#d8646f")
+    //-link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+", crossorigin="anonymous")
+    block content
+  body.normal.expert_body.graph
+    include ./components/graph_popup.jade
+    include ./components/popup_nocart.jade
+    .expert.main.wow.fadeIn
+
+      
+      .main_expert
+
+      header.navbar.navbar-default.navbar-fixed-top.hidden-md.hidden-lg.overflow_hidden
+        .row
+          .header_menu
+            .header_control.overflow_hidden
+              a.pull-left(href="/" title="МегаМеняйся 2.0")
+                img.pull-left.open_mega.pull-left(src="static/images/logo_mega_small_menu.png")
+              span.pull-right.text-right.mega_close +
+            .header_line
+              a.header_nav(href="/about", title="О проекте") О проекте
+            .header_line
+              a.header_nav(href="/calculate", title="Калькулятор") Калькулятор
+            .header_line
+              a.header_nav.active(href="/photo", title="Мнение экспертов") Мнение экспертов
+            .header_line.balance_mobile_place
+              script(type="text/javascript", src="/static/views/photo/balance_popup.js", language="javascript")
+              script(type="text/javascript", src="/static/views/photo/balance_mobile.js", language="javascript")
+          
+
+          .col-sm-12
+              .counter.pull-left
+                span.counter_desc собрано
+                ul.text-center
+                  include components/counter_data.jade
+                span.counter_desc Одежды
+              .pull-right
+                img.open_menu(src="static/images/hamburger.png")
+
+              .navbar-header.pull-right
+                a.navbar-brand.pull-right(href="/" title="МегаМеняйся 2.0")
+
+      header.navbar.navbar-default.hidden-xs.hidden-sm
+        .col-md-2.col-lg-3
+          .navbar-header
+         
+            a.navbar-brand(href="/" title="МегаМеняйся 2.0")
+          
+        .col-md-5.col-lg-5
+          a.header_nav(href="/about", title="О проекте") О проекте
+          a.header_nav(href="/calculate", title="Калькулятор") Калькулятор
+          a.header_nav.active(href="/photo", title="Мнение экспертов") Мнение экспертов
+
+        include components/counter.jade
+
+          .col-sm-12
+            .row
+              .counter.pull-left
+                span.counter_desc собрано
+                ul.text-center
+                  include components/counter_data.jade
+                span.counter_desc Одежды
+              .pull-right 
+                img.open_menu(src="static/images/hamburger.png", style="display: block; position: relative; padding-left: 20px; padding-top: 15px ")
+
+              .navbar-header.pull-right
+                a.navbar-brand.pull-right(href="/" title="МегаМеняйся 2.0")
+
+      .col-sm-12.wow.fadeIn.overflow_hidden
+        .row.margin_top_30
+          .col-md-8.expert_block
+            .row
+              .col15-sm-4.col15-lg-3.expert_left
+                .expert_left_before
+
+                h1.hidden-lg.hidden-md.margin_top_50.text-center(style="font-family: PlayfairDisplay-Bold; color:  #ffffff;font-size: 28px;;line-height: 27.379px; ") Победители
+
+
+                .expert_menu.text-left.overflow_hidden
+                  div
+                    a.expert_menu_item.expert_menu_item_1(href="/photo",title="Фотоконкурс") Мнения
+                    a.expert_menu_item.expert_menu_item_2.active(href="/winners",title="Победители") Победители
+                  div(id="menu_place")
+                    script(type="text/javascript", src="/static/views/register_popup.js", language="javascript")
+                    script(type="text/javascript", src="/static/views/photo/upload_popup.js", language="javascript")
+                    script(type="text/javascript", src="/static/views/photo/menu.js", language="javascript")
+
+                .expert_cart.margin_top_20.hidden-lg.hidden-md
+                  span.main_dates 
+                    | Совет от экспертов моды
+                    br
+                    | и карта «МЕГА подарок» на
+                  span.main_cost 3000 
+                    span.main_cost_multi.text-center x15
+                  span.main_win еженедельно
+                  //- a.expert_menu_item.active(title="Мнение", href="/photo") Мнение
+                  //- a.expert_menu_item(title="Победители", href="/winners") Победители
+                  //- a.expert_menu_item(title="Загрузить лук", href="#") Загрузить лук
+                .expert_journal.text-left.hidden-xs.hidden-sm
+                  a.expert_journal_img(title="Открыть журнал МЕГАStyle",href="http://megastyle.mega.ru",onclick="ga('send', 'event', 'click', 'click_mega_style');")
+                  .expert_journal_href Посмотреть Весна-Лето 2016
+              
+
+
+                  a.expert_journal_upload.hidden-xs.hidden-sm(title="Cкачать Журнал MEGAStyle", href="/static/images/mega_journal.pdf")
+                  a.expert_journal_href_2.hidden-xs.hidden-sm(title="Cкачать Журнал MEGAStyle", href="/static/images/mega_journal.pdf") Cкачать Журнал МЕГАStyle
+                  span.expert_journal_desc.hidden-xs.hidden-sm PDF, 43.1 M
+              .col15-sm-11.col15-lg-12.expert_right.expert_right_nobutton
+                .expert_right_before
+                .expert_center(id="photos_place")
+                script(type="text/javascript", src="/static/views/photo/winners.js", language="javascript")
+
+          .col-md-4
+            .expert_red.overflow_hidden
+
+              .expert_cart.margin_top_20.hidden-xs.hidden-sm
+                span.main_dates Получи совет экспертов<br>моды и выиграй карту<br>«МЕГА подарок»
+                span.main_cost 3000 
+                  span.main_cost_multi.text-center x15
+                span.main_win еженедельно
+
+              .expert_getlook(id="upload_button_place")
+              div(id="upload_popup_place")
+              script(type="text/javascript", src="/static/views/photo/upload_button.js", language="javascript")
+                //- span.expert_line.expert_getlook_text Загрузи<br>свой<br>лук
+
+              .expert_text
+                span.expert_line
+                  | Эксперты моды и
+                  br
+                  | Редакция журнала
+                  br
+                  span.font_play_bold МЕГАStyle 
+                  | оценят
+                  br
+                  | твой лук и дадут
+                  br
+                  | советы — что отдать,
+                  br
+                  | что оставить, а что —
+                  br
+                  | освежить
+                  br
+                  | аксессуарами.
+
+
+              .expert_person.margin_top_40.overflow_hidden
+                .expert_person_item.margin_top_20
+                  .expert_person_img(style="background-image: url(static/images/expert/exp_2.png)")
+                  span.expert_person_title Ольга Шелест
+                  br
+                  span.expert_person_description Самая популярная 
+                    br
+                    | и жизнерадостная 
+                    br
+                    | телеведущая,
+                    br
+                    | икона стиля
+                
+                .expert_person_item.margin_top_20
+                  .expert_person_img(style="background-image: url(static/images/expert/exp3.png)")
+                  span.expert_person_title Екатерина Климова
+                  br
+                  span.expert_person_description Одна из самых
+                    br
+                    | известных и
+                    br
+                    | талантливых
+                    br 
+                    | стилистов России и
+                    br 
+                    | журнала МЕГАStyle
+                .expert_person_item.margin_top_20
+                  .expert_person_img(style="background-image: url(static/images/expert/expert_photo.png)")
+                  span.expert_person_title Ольга Мальцева
+                  br
+                  span.expert_person_description 
+                    | Главный редактор 
+                    br
+                    a(title="Высшая Школа Шоппинга", href="http://megamall.ru/belaya_dacha/schoolofshopping/") Высшей Школы
+                      br
+                      | Шоппинга
+                    |,
+                    br
+                    |Fashion-журналист 
+                    br
+                    | и стилист
+
+              
+        .row
+          .expert_up
+          footer.navbar-bottom.hidden-sm.hidden-xs.mainpage
+            .col15-md-10.text-center-sm.hidden-sm.hidden-xs
+              span.copyright.expert © ООО "ИКЕА Сентерс Рус Менеджмент" 2016
+            .col15-md-5.text-center-sm
+              .pull-left
+                a.footer_rules(title="Правила",target="_blank", href="/static/images/Change_rules.pdf") Правила
+
+              .pull-right.text-nowrap
+                ul.social-icons.text-left
+                  li 
+                    a.fb(href="javascript:void(0)", title="Мы в Facebook", onclick="Share.facebook(share_url, share_title ,share_img, share_text, 'footer')")
+
+                  li 
+                    a.vk(href="javascript:void(0)", title="Мы в ВКонтакте", onclick="Share.vkontakte(share_url, share_title ,share_img, share_text, 'footer')")
+                  li 
+                    a.ok(href="javascript:void(0)", title="Мы в Одноклассниках", onclick="Share.odnoklassniki(share_url, share_text, 'footer')")
+                  li 
+                    a.tw(href="javascript:void(0)", title="Мы в Твиттере", onclick="Share.twitter(share_url,  share_text, 'footer')")
+
+
+
+          footer.hidden-lg.hidden-md.expert_footer
+            .col-md-12.text-center.overflow_hidden
+              .col-xs-6
+                a.footer_rules(title="Правила",target="_blank", href="/static/images/Change_rules.pdf") Правила
+              .col-xs-6
+
+
+            .col-md-6.text-center-sm.margin_top_10
+              
+              ul.social-icons.text-center-sm.col-md-6.text-center-xs
+                li 
+                  a.fb(href="javascript:void(0)", title="Мы в Facebook", onclick="Share.facebook(share_url, share_title ,share_img, share_text, 'footer')")
+
+                li 
+                  a.vk(href="javascript:void(0)", title="Мы в ВКонтакте", onclick="Share.vkontakte(share_url, share_title ,share_img, share_text, 'footer')")
+                li 
+                  a.ok(href="javascript:void(0)", title="Мы в Одноклассниках", onclick="Share.odnoklassniki(share_url, share_text, 'footer')")
+                li 
+                  a.tw(href="javascript:void(0)", title="Мы в Твиттере", onclick="Share.twitter(share_url,  share_text, 'footer')")
+            .col-md-6.text-center-sm.hidden-md.hidden-lg.text-center-xs
+              span.copyright © ООО "ИКЕА Сентерс Рус Менеджмент" 2016
+
+            script (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-5557003-14','auto');ga('send','pageview');
+            noscript
+              iframe(src="//www.googletagmanager.com/ns.html?id=GTM-MBVCDN", height="0", width="0",style="display:none;visibility:hidden")
+            script  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MBVCDN');

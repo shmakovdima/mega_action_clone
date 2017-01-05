@@ -1,0 +1,30 @@
+.modal.fade(role="dialog", id="myModal")
+  .modal-dialog
+    .modal-content
+      .modal-header
+
+        h2.modal-title.text-center Обратная связь
+      .modal-body
+        h3.text-center Позвоните по телефону
+        .text-center(width="100%")
+          a.phone.text-center(href="tel:+79035742365", title="Телефон поддержки") +79035742365
+
+
+        h3.text-center Или воспользуетесь связью через почту
+        form.form_horizontal.border-no.margin_top_20
+          .form-group.overflow_hidden
+            label.col-sm-6.control-label.text-right Имя
+            .col-sm-6
+              input.form-control(type="text", placeholder="Ваше имя")
+          .form-group.overflow_hidden
+            label.col-sm-6.control-label.text-right Email
+            .col-sm-6
+              input.form-control(type="text", placeholder="Введите имя")
+          .form-group.overflow_hidden
+            label.col-sm-6.control-label.text-right Текст сообщения
+            .col-sm-6
+              textarea.form-control( placeholder="Текст сообщения")
+ 
+
+      .modal-footer.text-center
+        button.text-center.btn.btn-primary(data-dismiss="modal") Закрыть

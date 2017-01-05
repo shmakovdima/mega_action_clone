@@ -1,0 +1,14 @@
+.Ёлегатное_пальто_в_стиле_minimal_такого_же_отте {
+  
+font-size: 40px;
+  
+font-family: "Playfair Display";
+
+  color: rgb(0, 0, 0);
+  
+line-height: 50px;
+  
+position: absolute;
+ 
+;
+}

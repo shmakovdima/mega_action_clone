@@ -1,0 +1,173 @@
+extends ./layout.jade
+block content
+
+  header.header  
+    .container.admin_page
+      h1.header_logo.pull-left.col-sm-3.col-xs-6
+        a.logo(href='/admin', title=language.header.main)
+      .text-center.col-sm-6.hidden-xs.hidden-sm
+        span.header_desc Информация об участнике
+      .pull-right.col-sm-3.col-xs-6.text-right(id="logout_place")
+      script(type="text/javascript", src="/static/views/admin/logout.js", language="javascript")
+
+  .main.admin_page
+    .background
+
+    //-Поиск человека
+    .container.main_first-container
+      h1.text-center.overflow_hidden Поиск участника
+      form.form_horizontal.border-no.margin_top_20
+        .form-group
+          .input-group.col-sm-10.col-sm-offset-1
+            input.form-control.phone(type="tel", placeholder="Введите телефон")
+            span.input-group-btn
+              button.btn.btn-secondary(type="button")
+                i.fa.fa-search
+
+    //-Вывод информации
+    .container.main_first-container
+      h1.text-center.overflow_hidden Профиль участника
+      form.form_horizontal.border-no.margin_top_20
+        .form-group.overflow_hidden
+          .col-xs-6.text-right
+            label.control-label Имя
+          .col-xs-6
+            p.form-control-static Вася 
+
+        .form-group.overflow_hidden
+          .col-xs-6.text-right
+            label.control-label Фамилия
+          .col-xs-6
+            p.form-control-static Петров
+        
+        .form-group.overflow_hidden
+          .col-xs-6.text-right
+            label.control-label Телефон
+          .col-xs-6
+            p.form-control-static +7 903 455 54 45
+        .form-group.overflow_hidden
+          .col-xs-6.text-right
+            label.control-label Email
+          .col-xs-6
+            p.form-control-static contact@pupkin.ru
+
+        .form-group.overflow_hidden
+          .col-xs-6.text-right
+            label.control-label Первая активность
+          .col-xs-6
+            p.form-control-static Тизер 
+            //-фото, тизер или вес
+
+        .form-group.overflow_hidden
+          .col-xs-6.text-right
+            label.control-label Мега
+          .col-xs-6
+            p.form-control-static Теплый стан 
+            //-и мобильные не забудь
+        
+        .form-group.overflow_hidden
+          .col-xs-6.text-right
+            label.control-label Общий сданный вес
+          .col-xs-6
+            p.form-control-static 50 кг
+      
+
+        .form-group.overflow_hidden
+          .col-xs-6.text-right
+            label.control-label Баланс
+          .col-xs-6
+            p.form-control-static 1250 руб
+
+        .form-group.overflow_hidden
+          .col-xs-6.text-right
+            label.control-label Кол-во выданных карт
+          .col-xs-6
+            p.form-control-static 4
+
+        .form-group.overflow_hidden
+          .col-xs-6.text-right
+            label.control-label Последний выданный код
+          .col-xs-6
+            p.form-control-static 545343
+
+
+        h2.text-center.overflow_hidden История сдачи веса
+        .table-responsive
+          table.table-bordered.table.table-striped
+            tr    
+              th.text-center Вес
+              th.text-center Дата
+              th.text-center Мега
+            tr
+              td.text-center 1.4 кг
+              td.text-center 12.03.16
+              td.text-center Теплый стан
+            tr
+              td.text-center 2.6 кг
+              td.text-center 17.03.16
+              td.text-center Химки
+
+
+        h2.text-center.overflow_hidden История выдачи карт
+        .table-responsive
+          table.table-bordered.table.table-striped
+            tr    
+              th.text-center  Номинал
+              th.text-center  Номер
+              th.text-center  Дата
+              th.text-center  Мега
+            tr
+              td.text-center 250 руб
+              td.text-center 21003443434
+              td.text-center 12.03.16
+              td.text-center Теплый стан
+            tr
+              td.text-center 250 руб
+              td.text-center 21003443434
+              td.text-center 17.03.16
+              td.text-center Химки
+
+        h2.text-center.overflow_hidden История фотоконкурса
+        .table-responsive
+          table.table-bordered.table.table-striped
+            tr    
+              th.text-center  Id
+              th.text-center  Фото
+              th.text-center  Дата
+              th.text-center  Статус
+              //- все 4 статуса 
+              th.text-center  Рекомендация
+              th.text-center  Эксперт
+              th.text-center  Расшаренность
+
+            tr
+              td.text-center 250 руб
+              td.text-center 
+               a.fansybox(href="ссылка на фото")
+                img.img-responsive.table-img.img-thumbnail(src="13.12.2012")
+              td.text-center 12.03.16
+              td.text-center Корзина
+              td.text-center Да
+              td.text-center Expert_1
+              td.text-center Да
+            tr
+              td.text-center 250 руб
+              td.text-center 
+               a.fansybox(href="ссылка на фото")
+                img.img-responsive.table-img.img-thumbnail(src="13.12.2012")
+              td.text-center 12.03.16
+              td.text-center Корзина
+              td.text-center Да
+              td.text-center Expert_1
+              td.text-center Да
+
+        form.form_horizontal.border-no.margin_top_20
+          .form-group.overflow_hidden
+            .col-xs-12.text-center
+              button.btn.btn-primary Вернуться
+
+
+
+
+  include ./includes/footer.jade
+  include ./includes/callback.jade  

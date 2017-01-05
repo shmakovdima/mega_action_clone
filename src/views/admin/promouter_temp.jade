@@ -1,0 +1,205 @@
+extends ./layout.jade
+block content
+
+  include ./includes/header_login.jade
+
+  .main.admin_page
+    .background
+    .container.main_first-container
+      h1.text-center.overflow_hidden Поиск человека
+      form.form_horizontal.border-no.margin_top_20
+        .form-group
+          .input-group.col-sm-10.col-sm-offset-1
+            input.form-control.phone(type="tel", placeholder="Введите телефон")
+            span.input-group-btn
+              button.btn.btn-secondary(type="button")
+                i.fa.fa-search
+
+
+              
+    .container.main_first-container
+      h1.text-center.overflow_hidden Регистрация нового участника
+      form.form_horizontal.border-no.margin_top_20
+        .form-group.overflow_hidden
+          label.col-sm-6.control-label.text-right Фамилия
+          .col-sm-6
+            input.form-control(type="text", placeholder="Введите Фамилию")
+        .form-group.overflow_hidden.has-error
+          label.col-sm-6.control-label.text-right Имя
+          .col-sm-6
+            input.form-control(type="text", placeholder="Введите имя")
+              
+        .form-group.overflow_hidden
+          label.col-sm-6.control-label.text-right Телефон
+          .col-sm-6
+            input.form-control.phone(type="tel", placeholder="Введите телефон")
+        .form-group.overflow_hidden
+          label.col-sm-6.control-label.text-right Email
+          .col-sm-6
+            input.form-control.phone(type="email", placeholder="Введите email")
+        .form-group.overflow_hidden
+          label.col-sm-6.control-label.text-right Моя МЕГА
+          .col-sm-6
+            select.form-control(placeholder="Выберите Мегу")
+              option(value="0") Тёплый стан
+              option(value="1") Белая Дача
+              option(value="2") Химки
+              option(value="3") Дыбенко
+              option(value="4") Парнас
+              option(value="5") Адыгея-Кубань
+              option(value="6") Екатеринбург
+              option(value="7") Казань
+              option(value="8") Нижний Новгород
+              option(value="9") Новосибирск
+              option(value="10") Омск
+              option(value="11") Ростов-на-Дону
+              option(value="12") Самара
+              option(value="13") Уфа
+        .form-group.overflow_hidden
+          label.col-sm-6.control-label.text-right Согласие на обратку
+          .col-sm-6.checkbox
+            label
+              input(type="checkbox")
+              Согласен
+        .form-group.overflow_hidden.text-center
+          button.btn.btn-primary Добавить
+
+
+    .container.main_first-container
+      h1.text-center.overflow_hidden Профиль участника
+      form.form_horizontal.border-no.margin_top_20
+
+        .form-group.overflow_hidden
+          .col-xs-6.text-right
+            label.control-label Имя
+          .col-xs-6
+            p.form-control-static Вася 
+
+        .form-group.overflow_hidden
+          .col-xs-6.text-right
+            label.control-label Фамилия
+          .col-xs-6
+            p.form-control-static Петров
+        
+        .form-group.overflow_hidden
+          .col-xs-6.text-right
+            label.control-label Телефон
+          .col-xs-6
+            p.form-control-static +7 903 455 54 45
+        .form-group.overflow_hidden
+          .col-xs-6.text-right
+            label.control-label Email
+          .col-xs-6
+            p.form-control-static contact@pupkin.ru
+
+        .form-group.overflow_hidden
+          .col-xs-6.text-right
+            label.control-label Баланс
+          .col-xs-6
+            p.form-control-static 1250 руб
+
+        .form-group.overflow_hidden.margin_top_20
+          .col-sm-4.text-center
+            button.btn.btn-primary Сдать вещи
+        
+          .col-sm-4.text-center
+            button.btn.btn-primary Снять деньги
+        
+          .col-sm-4.text-center
+            button.btn.btn-primary Вернуться
+
+    .container.main_first-container
+        h1.text-center.overflow_hidden Добавить вес
+        form.form_horizontal.border-no.margin_top_20
+          .form-group.overflow_hidden
+            .col-xs-6.text-right
+              label.control-label Вес (кг)
+            .col-xs-6
+              input.form-control.weight(type="text", placeholder="Введите вес", step="0.1", min="0")
+          .form-group.overflow_hidden
+            .col-xs-12.text-center
+              button.btn.btn-primary Добавить
+
+        h2.text-center.overflow_hidden История добавления веса
+        form.form_horizontal.border-no.margin_top_20
+          .form-group.overflow_hidden
+            .col-xs-6.text-right
+                label.control-label Всего сдано
+              .col-xs-6
+                p.form-control-static 12.5 кг
+        .table-responsive
+          table.table-bordered.table.table-striped
+            tr    
+              th.text-center  Вес
+              th.text-center  Дата
+              th.text-center  Мега
+            tr
+              td.text-center 1.4 кг
+              td.text-center 12.03.16
+              td.text-center Теплый стан
+            tr
+              td.text-center 2.6 кг
+              td.text-center 17.03.16
+              td.text-center Химки
+        form.form_horizontal.border-no.margin_top_20
+          .form-group.overflow_hidden
+            .col-xs-12.text-center
+              button.btn.btn-primary Вернуться
+
+
+    .container.main_first-container
+      h1.text-center.overflow_hidden Выдача карт
+      form.form_horizontal.border-no.margin_top_20
+        .form-group.overflow_hidden
+          .col-xs-6.text-right
+            label.control-label Баланс
+          .col-xs-6
+            p.form-control-static 1200 р
+        .form-group.overflow_hidden
+          .col-xs-6.text-right
+            label.control-label Осталось выдать
+          .col-xs-6
+            p.form-control-static 3 карты
+      h2.text-center.overflow_hidden Выдать карту
+      form.form_horizontal.border-no.margin_top_20
+        .form-group.overflow_hidden
+          .col-xs-6.text-right
+            label.control-label Введите номер карты
+          .col-xs-6
+            input.form-control(type="number", placeholder="Введите номер карты")
+        .form-group.overflow_hidden
+          .col-xs-6.text-right
+            label.control-label Выдать код на телефон
+          .col-xs-6
+            button.btn.btn-primary Выдать код
+        .form-group.overflow_hidden
+          .col-xs-6.text-right
+            label.control-label Проверочный код
+          .col-xs-6
+            input.form-control(type="text", placeholder="Введите проверочный код")
+        .form-group.overflow_hidden
+          .col-xs-12.text-center
+            button.btn.btn-primary Выдать карту
+      h2.text-center.overflow_hidden История выдачи карт
+      .table-responsive
+        table.table-bordered.table.table-striped
+          tr    
+            th.text-center  Номинал
+            th.text-center  Дата
+            th.text-center  Мега
+          tr
+            td.text-center 250 руб
+            td.text-center 12.03.16
+            td.text-center Теплый стан
+          tr
+            td.text-center 250 руб
+            td.text-center 17.03.16
+            td.text-center Химки
+      form.form_horizontal.border-no.margin_top_20
+        .form-group.overflow_hidden
+          .col-xs-12.text-center
+            button.btn.btn-primary Вернуться
+
+
+    
+

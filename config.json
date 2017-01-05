@@ -1,0 +1,79 @@
+{
+  "port": 3000,
+  "languages": ["russian", "english"],
+  "sms": {
+    "path": "https://gate.smsaero.ru/send/",
+    "login": "vit@futureaction.ru",
+    "password": "d8578edf8458ce06fbc5bb76a58c5ca4"
+  },
+  "jade": {
+    "encoding": "utf-8",
+    "styles": {
+      "common": ["/static/style.min.css"],
+      "admin": ["/static/admin/style.min.css"],
+      "mails": ["/static/mails.min.css"]
+    },
+    "scripts": {
+      "common": ["/static/script.min.js"],
+      "admin": ["/static/admin/script.min.js"]
+    }
+  },
+  "head": {
+    "timer": {
+      "title": "Меняйся с МЕГОЙ! С 9 марта по 9 апреля меняй старую одежду на новую",
+      "meta": {
+        "title": "Meta title",
+        "description": "Меняй старую одежду на новую с 9 марта по 9 апреля. Выиграй 100 000 руб на «Модный гардероб» в течении года",
+        "keywords": "Мегаменяйся, мега, конкурс, модный гардероб"
+      }
+    },
+    "index": {
+      "title": "Меняйся с МЕГОЙ! С 9 марта по 9 апреля меняй старую одежду на новую",
+      "meta": {
+        "title": "Meta title",
+        "description": "Меняй старую одежду на новую с 9 марта по 9 апреля. Выиграй 100 000 руб на «Модный гардероб» в течении года",
+        "keywords": "Мегаменяйся, мега, конкурс, модный гардероб"
+      }
+    },
+    "404": {
+      "title": "Меняйся с МЕГОЙ! | 404, страница не найдена",
+      "meta": {
+        "title": "Меняйся с МЕГОЙ! | 404, страница не найдена",
+        "description": "Меняй старую одежду на новую с 9 марта по 9 апреля. Выиграй 100 000 руб на «Модный гардероб» в течении года",
+        "keywords": "Мегаменяйся, мега, конкурс, модный гардероб"
+      }
+    },
+    "admin": {
+      "title": "Меняйся с МЕГОЙ! | Панель администратора",
+      "meta": {
+        "title": "Меняйся с МЕГОЙ! | Панель администратора",
+        "description": "Меняй старую одежду на новую с 9 марта по 9 апреля. Выиграй 100 000 руб на «Модный гардероб» в течении года",
+        "keywords": "Мегаменяйся, мега, конкурс, модный гардероб"
+      }
+    }
+  },
+  "session": {
+    "secret": "fpjfpwklef[wefkw['"
+  },
+  "db": {
+    "path": "mongodb://localhost/",
+    "name": "mega_action"
+  },
+  "nodemailer": {
+    "support": {
+      "service": "gmail",
+      "mail": "support@change.megamall.ru",
+      "auth": {
+        "user": "no-reply@change.megamall.ru",
+        "pass": ">8h4YyQQ2"
+      } 
+    },
+    "no-reply": {
+      "service": "gmail",
+      "auth": {
+        "user": "no-reply@change.megamall.ru",
+        "pass": ">8h4YyQQ2"
+      }      
+    }
+  }
+}
